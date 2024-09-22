@@ -84,6 +84,39 @@
   width: 100%;
   height: auto;
 }
+/*----------------------------------------------SPOTBILDER-------------------------------------------*/
+.bild-container {
+  position: relative; /* Gör att den här containern fungerar som referens för absolut positionering */
+  display: grid;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.bild-container img {
+  width: 100%;
+  height: auto;
+}
+
+.bild-container .text-ett, .text-två, .text-tre {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  color: rgb(0, 0, 0);
+  padding: 5px;
+  font-size: 30px;
+  font-family:Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+/* Ändrar färg endast när muspekaren är över själva texten */
+.text-ett:hover, .text-två:hover, .text-tre:hover {
+  color: rgb(112, 5, 5); /* Endast den texten du hovrar över blir svart */
+}
+
 /*----------------------------------------------PRODUKTBILDER-------------------------------------------*/
 /* Produkter container */
 .product-grid {
@@ -183,11 +216,14 @@
 .footericon-container {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  gap: 15px;
+  gap: 5px;
   font-size: 16px;
-  color: black;
-  margin-top: 35px;
+  color: rgb(0, 0, 0);
+  margin-top: 30px;
   text-align: left;
+  margin-left: 15px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .footericon-info {
@@ -202,6 +238,42 @@
 
 .footericon-info p {
   margin: 0;
+}
+.footerinfo {
+  display: flex;
+  gap: 40px;
+  padding: 10px;
+  background-color: #f8f8f8; /* Grå bakgrund som i skärmdumpen */
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.footerinfo div {
+  display: flex;
+  flex-direction: column; /* Lägger elementen i kolumn */
+  gap: 10px; /* Mellanrum mellan länkarna i varje kolumn */
+}
+
+.footerinfo p {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.footerinfo a {
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+}
+
+.footerinfo a:hover {
+  text-decoration: underline; /* Understrykning vid hover */
+}
+.copyright {
+  text-align: center; /* Centrerar texten i footern */
+  color: #000000; /* Ändra färgen till en mörkare nyans */
+  font-size: 14px; /* Anpassa storleken på texten */
+  font-family: Arial, sans-serif; /* Välj en specifik font om du vill */
+  padding: 20px 0; /* Lägger till lite padding för utrymme runt copyright-texten */
+  margin-bottom: 10px;
 }
 /*------------------------------------------------ACCORDION-----------------------------------------------*/
 
@@ -365,7 +437,6 @@ th {
 /*--------------------------0-640px-------------------MOBIL-----------------------------------------------*/
 
 @media (max-width: 640px) {
-  
   .logo {
     width: 100%;
     margin-left: 0px;
@@ -439,10 +510,195 @@ th {
   }
   .product-grid i {
     position: absolute;
-    bottom: 100px;
+    bottom: 80px !important;
     right: 15px;
     color: rgb(255, 255, 255);
+    font-size: 30px !important;
+  }
+
+  .product-grid a i.fa-heart,
+  .icons-container a i.fa-heart {
+    transition: transform 0.3s ease;
+  }
+
+  .product-grid a:hover i.fa-heart,
+  .icons-container a:hover i.fa-heart {
+    transform: scale(1.5);
+    color: rgb(120, 42, 42);
+  }
+
+  .product-info {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-row-gap: 5px;
+    text-align: left;
+    margin-top: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 25px;
+  }
+
+  .product-name-price {
+    display: grid;
+    grid-template-columns: 1fr auto;
+  }
+
+  .product-name {
+    font-weight: bold;
+  }
+
+  .product-price {
+    font-weight: bold;
+    color: #000;
+    justify-self: end;
+  }
+
+  .product-brand {
+    font-size: 16px !important;
+    color: #000000;
     font-size: 30px;
+  }
+
+  .badge-container {
+    position: relative;
+    width: 100%;
+  }
+
+  .badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 20px;
+  }
+  .footer {
+    width: 100vw;
+    background-color: #aaa5a5;
+    padding: 20px 0;
+    position: relative;
+    z-index: 1;
+    margin-top: 20px;
+  }
+  .footericon-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 5px;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    margin-top: 30px;
+    text-align: left;
+    margin-left: 15px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+
+  .footericon-info {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+  }
+
+  .footericon-info i {
+    margin-right: 10px;
+  }
+
+  .footericon-info p {
+    margin: 0;
+  }
+  .copyright {
+    text-align: center; /* Centrerar texten i footern */
+    color: #000000; /* Ändra färgen till en mörkare nyans */
+    font-size: 14px; /* Anpassa storleken på texten */
+    font-family: Arial, sans-serif; /* Välj en specifik font om du vill */
+    padding: 20px 0; /* Lägger till lite padding för utrymme runt copyright-texten */
+    margin-bottom: 10px;
+  }
+  .spotbilder {
+    display: none;
+  }
+  .footerinfo {
+    display: none;
+  }
+}
+/*--------------------------640px-1024px-----------------------------IPAD--------------------------------*/
+
+@media (min-width: 640px) {
+  .logo-container {
+    display: flex;
+    align-items: left;
+  }
+  .logo {
+    width: 50%;
+    margin-left: 0px;
+    margin-right: 20px;
+  }
+  .icons-container {
+    display: flex;
+    gap: 10px;
+    margin-left: 60px;
+    font-size: 35px;
+  }
+
+  .search-container {
+    width: 45%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+   
+  }
+  .search {
+    font-size: 25px;
+    margin-left: 5px;
+  }
+    .fa-solid.fa-magnifying-glass {
+      font-size: 25px;
+      position: absolute;
+      color: black;
+      
+
+    
+  }
+  .headerlink a {
+    font-size: 25px;
+    display: flex;
+    flex-direction: row;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 15px;
+  }
+  .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: solid black 5px;
+    border-radius: 10px;
+    padding: 0;
+    width: 100%;
+  }
+
+  .hero a {
+    font-size: 50px;
+  }
+  .spotbilder {
+    display: none;
+    }
+  .product {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+  .product-grid i {
+    position: absolute;
+    bottom: 70px;
+    right: 15px;
+    color: rgb(255, 255, 255);
+    font-size: 35px;
     z-index: 1;
   }
 
@@ -464,7 +720,7 @@ th {
     text-align: left;
     margin-top: 10px;
     font-family: Arial, sans-serif;
-    font-size: 20px;
+    font-size: 25px;
   }
 
   .product-name-price {
@@ -483,11 +739,11 @@ th {
   }
 
   .product-brand {
-    font-size: 14px;
     color: #000000;
-    font-size: 30px;
+    font-size: 20px;
   }
 
+  /* Badge-layout */
   .badge-container {
     position: relative;
     width: 100%;
@@ -501,131 +757,92 @@ th {
     color: white;
     padding: 5px 10px;
     border-radius: 5px;
-    font-size: 20px;
+    font-size: 30px;
   }
-}
-/*--------------------------640px-1024px-----------------------------IPAD--------------------------------*/
+  .footer {
+    width: 100vw;
+    background-color: #aaa5a5;
+    padding: 20px 0;
+    position: relative;
+    z-index: 1;
+    margin-top: 20px;
+  }
+  .footericon-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    margin-top: 30px;
+    text-align: left;
+    margin-left: 15px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
 
-@media (min-width: 640px) {
-  .logo-container {
+  .footericon-info {
     display: flex;
     align-items: left;
-  }
-  .logo {
-    width: 50%;
-    margin-left: 0px;
-    margin-right: 20px;
-  }
-  .icons-container {
-    display: flex;
-    gap: 10px;
-    margin-left: 60px;
-    font-size: 25px;
+    justify-content: left;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
 
-  .search-container {
-    width: 45%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding-left: 0px;
-    margin-bottom: 20px;
+  .footericon-info i {
+    margin-right: 10px;
   }
-  .headerlink a {
+
+  .footericon-info p {
+    margin: 0;
+  }
+  .footerinfo {
     display: flex;
-    flex-direction: row;
-    color: black;
-    color: black;
-    text-decoration: none;
+  }
+  .footerinfo {
+    display: flex;
+    gap: 40px;
+    font-size: 16px;
+    padding: 10px;
+    background-color: #f8f8f8; 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
+  .footerinfo div {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px; 
+  }
+  
+  .footerinfo p {
     font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-bottom: 15px;
+    font-size: 25px;
+    text-decoration: underline;
   }
-  .hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border: solid black 5px; /* Mindre border */
-    border-radius: 10px; /* Mindre hörnrundning */
-    padding: 0; /* Ta bort padding */
-    width: 100%; /* Säkerställ att den tar upp hela bredden */
+  
+  .footerinfo a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    
   }
+  
+  .footerinfo a:hover {
+    text-decoration: underline; /* Understrykning vid hover */
+  }
+.copyright {
+  text-align: center; /* Centrerar texten i footern */
+  color: #000000; /* Ändra färgen till en mörkare nyans */
+  font-size: 20px; /* Anpassa storleken på texten */
+  font-family: Arial, sans-serif; /* Välj en specifik font om du vill */
+  padding: 20px 0; /* Lägger till lite padding för utrymme runt copyright-texten */
+  margin-bottom: 10px;
 }
-.hero a {
-  font-size: 50px;
+.accordion {
+  display: none;
 }
-.product {
-  flex: 1 1 calc(50% - 20px); /* Tar upp 50% av bredden minus gap */
-  max-width: calc(50% - 20px);
-}
-.product-grid i {
-  position: absolute;
-  bottom: 100px;
-  right: 15px;
-  color: rgb(255, 255, 255);
-  font-size: 50px;
-  z-index: 1;
-}
-
-.product-grid a i.fa-heart,
-.icons-container a i.fa-heart {
-  transition: transform 0.3s ease;
 }
 
-.product-grid a:hover i.fa-heart,
-.icons-container a:hover i.fa-heart {
-  transform: scale(1.5);
-  color: rgb(120, 42, 42);
-}
 
-.product-info {
-  display: grid;
-  grid-template-rows: auto auto;
-  grid-row-gap: 5px;
-  text-align: left;
-  margin-top: 10px;
-  font-family: Arial, sans-serif;
-  font-size: 20px;
-}
 
-.product-name-price {
-  display: grid;
-  grid-template-columns: 1fr auto;
-}
-
-.product-name {
-  font-weight: bold;
-}
-
-.product-price {
-  font-weight: bold;
-  color: #000;
-  justify-self: end;
-}
-
-.product-brand {
-  font-size: 14px;
-  color: #000000;
-  font-size: 16px;
-}
-
-/* Badge-layout */
-.badge-container {
-  position: relative;
-  width: 100%;
-}
-
-.badge {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background-color: black;
-  color: white;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 30px;
-}
 
 /*------------------------------1024px ---> ---------------------DESKTOP----------------------------------*/
 @media (min-width: 1024px) {
@@ -680,20 +897,20 @@ th {
     text-decoration: none;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: 30px;
   }
   .hero {
-    border: solid black 5px; /* Mindre border */
-    border-radius: 10px; /* Mindre hörnrundning */
+    border: solid black 10px; /* Mindre border */
+    border-radius: 50px; /* Mindre hörnrundning */
     padding: 0; /* Ta bort padding */
-    width: 100%; /* Säkerställ att den tar upp hela bredden */
+    width: 95%; /* Säkerställ att den tar upp hela bredden */
   }
   .hero a {
     color: black;
     text-decoration: none;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 85px;
+    font-size: 60px;
     text-align: center;
     text-decoration: none;
   }
@@ -702,18 +919,52 @@ th {
     height: auto;
     display: grid;
     grid-template-columns: 1fr;
-    margin-top: 10px;
+    margin-top: 50px;
+    margin-bottom: 25px;
   }
+  .spotbilder {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 10px;
+    margin-top: 25px;
+  }
+
+  .spotbilder img {
+    width: 100%;
+    height: auto;
+  }
+
+  .text-ett, .text-två, .text-tre {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    color: rgb(0, 0, 0);
+    padding: 5px;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    transition: color 0.3s ease;
+    cursor: pointer;
+  }
+  .spotbilder:hover .text {
+    color: rgb(132, 5, 5);
+  }
+
   .product {
-    flex: 1 1 calc(25% - 20px); /* Tar upp 25% av bredden minus gap */
+    flex: 1 1 calc(25% - 20px);
     max-width: calc(25% - 20px);
+    margin-top: 40px;
   }
   .product-grid i {
     position: absolute;
-    bottom: 75px;
+    bottom: 60px;
     right: 15px;
     color: rgb(255, 255, 255);
-    font-size: 40px;
+    font-size: 30px;
     z-index: 1;
   }
 
@@ -735,7 +986,7 @@ th {
     text-align: left;
     margin-top: 10px;
     font-family: Arial, sans-serif;
-    font-size: 25px;
+    font-size: 20px;
   }
 
   .product-name-price {
@@ -756,7 +1007,7 @@ th {
   .product-brand {
     font-size: 14px;
     color: #000000;
-    font-size: 20px;
+    font-size: 15px;
   }
 
   .badge-container {
@@ -768,10 +1019,275 @@ th {
     position: absolute;
     top: 10px;
     left: 10px;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     color: white;
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 30px;
+  }
+  .footer {
+    width: 100vw;
+    background-color: #aaa5a5;
+    padding: 20px 0;
+    position: relative;
+    z-index: 1;
+    margin-top: 20px;
+  }
+  .footericon-container {
+    display:flex;
+    gap: 15px;
+    font-size: 23px;
+    color: rgb(0, 0, 0);
+    margin-top: 30px;
+    text-align: left;
+    margin-left: 15px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+
+  .footericon-info {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+  }
+
+  .footericon-info i {
+    margin-right: 10px;
+  }
+
+  .footericon-info p {
+    margin: 0;
+  }
+  .copyright {
+    text-align: center; /* Centrerar texten i footern */
+    color: #000000; /* Ändra färgen till en mörkare nyans */
+    font-size: 20px; /* Anpassa storleken på texten */
+    font-family: Arial, sans-serif; /* Välj en specifik font om du vill */
+    padding: 20px 0; /* Lägger till lite padding för utrymme runt copyright-texten */
+    margin-bottom: 10px;
+  }
+}
+
+/*------------------------------1200px ---> ---------------------DESKTOP----------------------------------*/
+@media (min-width: 1200px) {
+  .search-container {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 0px;
+    padding-top: 15px;
+  }
+
+  .search {
+    width: 100%;
+    padding: 15px 30px 15px 30px;
+    font-size: 25px;
+    border: 2px solid #000000;
+    border-radius: 20px;
+    margin-left: 20px;
+  }
+
+  .fa-solid.fa-magnifying-glass {
+    position: absolute;
+    left: 25px;
+    pointer-events: none;
+    color: #000000;
+    font-size: 25px;
+  }
+  .icons-container {
+    display: flex;
+    gap: 10px;
+    margin-left: 80px;
+  }
+
+  .icons-container i {
+    font-size: 50px;
+    color: #000;
+    cursor: pointer;
+  }
+
+  .icons-container i:hover {
+    color: #807d7d;
+  }
+
+  .headerlink {
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+
+  .headerlink a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+  }
+  .hero {
+    border: solid black 10px; /* Mindre border */
+    border-radius: 50px; /* Mindre hörnrundning */
+    padding: 0; /* Ta bort padding */
+    width: 95%; /* Säkerställ att den tar upp hela bredden */
+  }
+  .hero a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 60px;
+    text-align: center;
+    text-decoration: none;
+  }
+  .hero img {
+    width: 90%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 50px;
+    margin-bottom: 25px;
+  }
+  .spotbilder {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 10px;
+    margin-top: 25px;
+  }
+
+  .spotbilder img {
+    width: 100%;
+    height: auto;
+  }
+
+  .text-ett, .text-två, .text-tre {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    color: rgb(0, 0, 0);
+    padding: 5px;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    transition: color 0.3s ease;
+    cursor: pointer;
+  }
+  .spotbilder:hover .text {
+    color: rgb(132, 5, 5);
+  }
+
+  .product {
+    flex: 1 1 calc(25% - 20px);
+    max-width: calc(25% - 20px);
+    margin-top: 40px;
+  }
+  .product-grid i {
+    position: absolute;
+    bottom: 60px;
+    right: 15px;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    z-index: 1;
+  }
+
+  .product-grid a i.fa-heart,
+  .icons-container a i.fa-heart {
+    transition: transform 0.3s ease;
+  }
+
+  .product-grid a:hover i.fa-heart,
+  .icons-container a:hover i.fa-heart {
+    transform: scale(1.5);
+    color: rgb(120, 42, 42);
+  }
+
+  .product-info {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-row-gap: 5px;
+    text-align: left;
+    margin-top: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+  }
+
+  .product-name-price {
+    display: grid;
+    grid-template-columns: 1fr auto;
+  }
+
+  .product-name {
+    font-weight: bold;
+  }
+
+  .product-price {
+    font-weight: bold;
+    color: #000;
+    justify-self: end;
+  }
+
+  .product-brand {
+    font-size: 14px;
+    color: #000000;
+    font-size: 15px;
+  }
+
+  .badge-container {
+    position: relative;
+    width: 100%;
+  }
+
+  .badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 30px;
+  }
+  .footer {
+    align-items: ;
+    width: 100vw;
+    background-color: #aaa5a5;
+    padding: 20px 0;
+    position: relative;
+    z-index: 1;
+    margin-top: 20px;
+  }
+  .footericon-container {
+    display: flex;
+    gap: 5px;
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+    margin-top: 30px;
+    text-align: center;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+
+  .footericon-info {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+  }
+
+  .footericon-info i {
+    margin-right: 10px;
+  }
+
+  .footericon-info p {
+    margin: 0;
+  }
+  .copyright {
+    text-align: center; /* Centrerar texten i footern */
+    color: #000000; /* Ändra färgen till en mörkare nyans */
+    font-size: 20px; /* Anpassa storleken på texten */
+    font-family: Arial, sans-serif; /* Välj en specifik font om du vill */
+    padding: 20px 0; /* Lägger till lite padding för utrymme runt copyright-texten */
+    margin-bottom: 10px;
   }
 }

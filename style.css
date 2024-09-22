@@ -1,91 +1,91 @@
-    /*------------------------------------------ALLMÄN STYLING--------------------------------------------*/
+/*------------------------------------------ALLMÄN STYLING--------------------------------------------*/
 
-    /*----------------------------------------------HEADERLOGGA----------------------------------------------*/
-    .logo-container {
-      display: grid;
-    }
+/*----------------------------------------------HEADERLOGGA----------------------------------------------*/
+.logo-container {
+  display: grid;
+}
 
-    .logo {
-      width: 100%;
-      height: auto;
-      margin-left: 0px;
-    }
-    .logo-full {
-      width: 70%;
-      margin-left: 0px;
-    }
-    /*----------------------------------------------SÖKFUNKTION-----------------------------------------------*/
-    .search-container {
-      width: 100%;
-      position: relative;
-      display: flex;
-      align-items: center;
-      padding-left: 0px;
-    }
+.logo {
+  width: 100%;
+  height: auto;
+  margin-left: 0px;
+}
+.logo-full {
+  width: 70%;
+  margin-left: 0px;
+}
+/*----------------------------------------------SÖKFUNKTION-----------------------------------------------*/
+.search-container {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 0px;
+}
 
-    .search {
-      width: 100%;
-      padding: 8px 30px 8px 25px;
-      font-size: 14px;
-      border: 2px solid #000000;
-      border-radius: 20px;
-    }
+.search {
+  width: 100%;
+  padding: 8px 30px 8px 25px;
+  font-size: 14px;
+  border: 2px solid #000000;
+  border-radius: 20px;
+}
 
-    .fa-solid.fa-magnifying-glass {
-      position: absolute;
-      left: 10px;
-      color: #000000;
-      font-size: 14px;
-    }
-    /*----------------------------------------------HEADERIKONER-----------------------------------------*/
-    .icons-container a {
-      color: black;
-    }
-    .icons-container a:hover,
-    .headerlink a:hover,
-    .hero a:hover {
-      color: #5e0707; /* Färg vid hover */
-    }
+.fa-solid.fa-magnifying-glass {
+  position: absolute;
+  left: 10px;
+  color: #000000;
+  font-size: 14px;
+}
+/*----------------------------------------------HEADERIKONER-----------------------------------------*/
+.icons-container a {
+  color: black;
+}
+.icons-container a:hover,
+.headerlink a:hover,
+.hero a:hover {
+  color: #5e0707; /* Färg vid hover */
+}
 
-    .headerlink {
-      display: flex; /* Gör att länkarna placeras horisontellt */
-      justify-content: flex-start; /* Justerar länkarna till vänster */
-      gap: 20px; /* Lägger till mellanrum mellan länkarna */
-      margin-top: 10px;
-      margin-left: 10px;
-    }
+.headerlink {
+  display: flex; /* Gör att länkarna placeras horisontellt */
+  justify-content: flex-start; /* Justerar länkarna till vänster */
+  gap: 20px; /* Lägger till mellanrum mellan länkarna */
+  margin-top: 10px;
+  margin-left: 10px;
+}
 
-    .headerlink a {
-      color: black;
-      text-decoration: none;
-      font-weight: bold;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 16px; /* Gör texten lite större om det behövs */
-    }
+.headerlink a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px; /* Gör texten lite större om det behövs */
+}
 
-    /*------------------------------------------------HERO---------------------------------------------------*/
-    .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      margin: 0 auto;
-    }
-    .hero a {
-      color: black;
-      text-decoration: none;
-      font-weight: bold;
-      font-family: Arial, Helvetica, sans-serif;
-      text-align: center;
-      text-decoration: none;
-    }
-    .hero img {
-      width: 100%;
-      height: auto;
-    }
-    /*----------------------------------------------PRODUKTBILDER-------------------------------------------*/
-    /* Produkter container */
+/*------------------------------------------------HERO---------------------------------------------------*/
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+}
+.hero a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  text-decoration: none;
+}
+.hero img {
+  width: 100%;
+  height: auto;
+}
+/*----------------------------------------------PRODUKTBILDER-------------------------------------------*/
+/* Produkter container */
 .product-grid {
   display: flex;
   flex-wrap: wrap; /* Låter produkterna brytas till en ny rad */
@@ -123,393 +123,392 @@
   border-radius: 5px;
   font-size: 14px;
 }
-    /*-------------------------------------------------FOOTER-------------------------------------------------*/
-    .footer {
-      width: 100vw;
-      background-color: #aaa5a5;
-      padding: 20px 0;
-      position: relative;
-      z-index: 1;
-      margin-top: 20px;
-    }
-    .footericon-container {
-      display: grid;
-      grid-template-columns: repeat(1, 1fr);
-      gap: 15px;
-      font-size: 16px;
-      color: black;
-      margin-top: 35px;
-      text-align: left;
-    }
+/*-------------------------------------------------FOOTER-------------------------------------------------*/
+.footer {
+  width: 100vw;
+  background-color: #aaa5a5;
+  padding: 20px 0;
+  position: relative;
+  z-index: 1;
+  margin-top: 20px;
+}
+.footericon-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 15px;
+  font-size: 16px;
+  color: black;
+  margin-top: 35px;
+  text-align: left;
+}
 
-    .footericon-info {
-      display: flex;
-      align-items: left;
-      justify-content: left;
-    }
+.footericon-info {
+  display: flex;
+  align-items: left;
+  justify-content: left;
+}
 
-    .footericon-info i {
-      margin-right: 10px;
-    }
+.footericon-info i {
+  margin-right: 10px;
+}
 
-    .footericon-info p {
-      margin: 0;
-    }
-    /*------------------------------------------------ACCORDION-----------------------------------------------*/
+.footericon-info p {
+  margin: 0;
+}
+/*------------------------------------------------ACCORDION-----------------------------------------------*/
 
-    .accordion {
-      padding-top: 30px;
-      width: 90%;
-      margin-left: 10px;
-    }
+.accordion {
+  padding-top: 30px;
+  width: 90%;
+  margin-left: 10px;
+}
 
-    .accordion-item {
-      border-bottom: 1px solid #ffffff;
-    }
+.accordion-item {
+  border-bottom: 1px solid #ffffff;
+}
 
-    .accordion-checkbox {
-      display: none;
-    }
-    .accordion-checkbox:checked + .accordion-button + .accordion-body {
-      max-height: 200px;
-      padding: 10px;
-    }
+.accordion-checkbox {
+  display: none;
+}
+.accordion-checkbox:checked + .accordion-button + .accordion-body {
+  max-height: 200px;
+  padding: 10px;
+}
 
-    .accordion-button {
-      background-color: #a5a2cb;
-      padding: 10px;
-      font-size: 1.25rem;
-      width: 100%;
-      text-align: center;
-      border: none;
-      cursor: pointer;
-      outline: none;
-      display: grid;
-    }
+.accordion-button {
+  background-color: #a5a2cb;
+  padding: 10px;
+  font-size: 1.25rem;
+  width: 100%;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  display: grid;
+}
 
-    .accordion-button:hover {
-      background-color: #3983ce;
-    }
+.accordion-button:hover {
+  background-color: #3983ce;
+}
 
-    .accordion-body {
-      max-height: 0;
-      overflow: hidden;
-      background-color: #f8f9fa;
-    }
-    .accordion-body a {
-      display: block;
-      margin-top: 10px;
-      color: #000000;
-      text-decoration: none;
-    }
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  background-color: #f8f9fa;
+}
+.accordion-body a {
+  display: block;
+  margin-top: 10px;
+  color: #000000;
+  text-decoration: none;
+}
 
-    .accordion-body a:hover {
-      text-decoration: underline;
-    }
+.accordion-body a:hover {
+  text-decoration: underline;
+}
 
-    .button button {
-      margin-left: 100px;
-      place-items: center;
-      color: rgb(0, 0, 0);
-      background-color: white;
-      font-size: 16px;
-      padding: 10px;
-      cursor: pointer;
-    }
-    /* -------------------------------------------ADMINISTRATIONS SIDA, INDEX--------------------------------*/
-    .header {
-      background-color: rgb(167, 167, 167);
-      text-align: center;
-      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-    }
-    .sidebar {
-      background-color: #ddd;
-      height: 100vh;
+.button button {
+  margin-left: 100px;
+  place-items: center;
+  color: rgb(0, 0, 0);
+  background-color: white;
+  font-size: 16px;
+  padding: 10px;
+  cursor: pointer;
+}
+/* -------------------------------------------ADMINISTRATIONS SIDA, INDEX--------------------------------*/
+.header {
+  background-color: rgb(167, 167, 167);
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.sidebar {
+  background-color: #ddd;
+  height: 100vh;
 
-      position: fixed;
-      top: 57px;
-      left: 8px;
-      padding-top: 20px;
-      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    }
+  position: fixed;
+  top: 57px;
+  left: 8px;
+  padding-top: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
 
-    .sidebar h3 {
-      padding: 10px;
-      font-family: Arial, sans-serif;
-    }
-    .produktknapp {
-      display: grid;
-      grid-template-rows: auto auto;
-      grid-row-gap: 5px;
-      text-align: left;
-      margin-top: 10px;
-      font-family: Arial, sans-serif;
-    }
+.sidebar h3 {
+  padding: 10px;
+  font-family: Arial, sans-serif;
+}
+.produktknapp {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-row-gap: 5px;
+  text-align: left;
+  margin-top: 10px;
+  font-family: Arial, sans-serif;
+}
 
-    .produktknapp {
-      display: flex;
-      align-items: center;
-      padding: 10px 0;
-    }
+.produktknapp {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
 
-    .produktrubrik {
-      font-weight: bold;
-      font-size: 16px;
-    }
+.produktrubrik {
+  font-weight: bold;
+  font-size: 16px;
+}
 
-    .add-product-btn {
-      background-color: #000000;
-      color: white;
-      padding: 10px 10px;
-      text-decoration: none;
-      border-radius: 5px;
-    }
+.add-product-btn {
+  background-color: #000000;
+  color: white;
+  padding: 10px 10px;
+  text-decoration: none;
+  border-radius: 5px;
+}
 
-    .add-product-btn:hover {
-      background-color: #45a049;
-    }
+.add-product-btn:hover {
+  background-color: #45a049;
+}
 
-    .main-content {
-      margin-left: 110px;
-    }
+.main-content {
+  margin-left: 110px;
+}
 
-    .main-content h2 {
-      margin-bottom: 25px;
-    }
+.main-content h2 {
+  margin-bottom: 25px;
+}
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-    }
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
 
-    table,
-    th,
-    td {
-      border: 1px solid #ddd;
-    }
+table,
+th,
+td {
+  border: 1px solid #ddd;
+}
 
-    th,
-    td {
-      padding: 10px;
-      text-align: left;
-    }
+th,
+td {
+  padding: 10px;
+  text-align: left;
+}
 
-    th {
-      background-color: #f2f2f2;
-    }
+th {
+  background-color: #f2f2f2;
+}
 
-    .add-product-btn {
-      display: inline-block;
-      margin-top: 20px;
-      margin-left: 120px;
-      padding: 10px 10px;
-      background-color: #000000;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-    }
+.add-product-btn {
+  display: inline-block;
+  margin-top: 20px;
+  margin-left: 120px;
+  padding: 10px 10px;
+  background-color: #000000;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
 
-    .add-product-btn:hover {
-      background-color: #45a049;
-    }
+.add-product-btn:hover {
+  background-color: #45a049;
+}
 
-    /*--------------------------0-640px-------------------MOBIL-----------------------------------------------*/
+/*--------------------------0-640px-------------------MOBIL-----------------------------------------------*/
 
-    @media (max-width: 640px) {
-      .logo {
-        width: 100%;
-        margin-left: 0px;
-        margin-bottom: 20px;
-      }
-      .icons-container {
-        display: flex;
-        gap: 10px;
-        padding-left: 10px;
-      }
+@media (max-width: 640px) {
+  .logo {
+    width: 100%;
+    margin-left: 0px;
+    margin-bottom: 20px;
+  }
+  .icons-container {
+    display: flex;
+    gap: 10px;
+    padding-left: 10px;
+  }
 
-      .search-container {
-        width: 100%;
-        position: relative;
-        display: flex;
-        align-items: center;
-        padding-left: 0px;
-        margin-bottom: 15px;
-      }
+  .search-container {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 0px;
+    margin-bottom: 15px;
+  }
 
-      .search {
-        width: 85%;
-        padding: 8px 30px 8px 25px;
-        font-size: 14px;
-        border: 2px solid #000000;
-        border-radius: 20px;
-      }
+  .search {
+    width: 85%;
+    padding: 8px 30px 8px 25px;
+    font-size: 14px;
+    border: 2px solid #000000;
+    border-radius: 20px;
+  }
 
-      .fa-solid.fa-magnifying-glass {
-        font-size: 14px;
-        position: absolute;
-        left: 10px;
-        color: black;
-      }
+  .fa-solid.fa-magnifying-glass {
+    font-size: 14px;
+    position: absolute;
+    left: 10px;
+    color: black;
+  }
 
-      .icons-container i {
-        font-size: 25px;
-      }
-      .headerlink {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 5px;
-      }
-      .headerlink a {
-        color: black;
-        text-decoration: none;
-        font-weight: bold;
-        font-family: Arial, Helvetica, sans-serif;
-        margin-bottom: 15px;
-      }
+  .icons-container i {
+    font-size: 25px;
+  }
+  .headerlink {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+  }
+  .headerlink a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 15px;
+  }
 
-      .hero {
-        display: grid;
-        padding: 15px;
-        width: 90%;
-        font-size: 30px;
-        border: solid black;
-        border-radius: 20px;
-      }
+  .hero {
+    display: grid;
+    padding: 15px;
+    width: 90%;
+    font-size: 30px;
+    border: solid black;
+    border-radius: 20px;
+  }
 
-      .hero img {
-        width: 100%;
-        height: auto;
-        margin-top: 15px;
-        margin-bottom: 10px;
-      }
-      .product a {
-        display: flex;
-        flex-direction: column ;
-      }
-    }
-    /*--------------------------640px-1024px-----------------------------IPAD--------------------------------*/
+  .hero img {
+    width: 100%;
+    height: auto;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+  .product {
+    flex: 1 1 100%; /* Varje bild tar upp 100% av bredden */
+    max-width: 100%; /* Säkerställer att varje produkt tar hela bredden */
+  }
+}
+/*--------------------------640px-1024px-----------------------------IPAD--------------------------------*/
 
-    @media (min-width: 640px) {
-      .logo-container {
-        display: flex;
-        align-items: left;
-      }
-      .logo {
-        width: 50%;
-        margin-left: 0px;
-        margin-right: 20px;
-      }
-      .icons-container {
-        display: flex;
-        gap: 10px;
-        margin-left: 60px;
-        font-size: 25px;
-      }
+@media (min-width: 640px) {
+  .logo-container {
+    display: flex;
+    align-items: left;
+  }
+  .logo {
+    width: 50%;
+    margin-left: 0px;
+    margin-right: 20px;
+  }
+  .icons-container {
+    display: flex;
+    gap: 10px;
+    margin-left: 60px;
+    font-size: 25px;
+  }
 
-      .search-container {
-        width: 45%;
-        position: relative;
-        display: flex;
-        align-items: center;
-        padding-left: 0px;
-        margin-bottom: 20px;
-      }
-      .headerlink a {
-        display: flex;
-        flex-direction: row;
-        color: black;
-        color: black;
-        text-decoration: none;
-        font-weight: bold;
-        font-family: Arial, Helvetica, sans-serif;
-        margin-bottom: 15px;
-      }
-      .hero {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-      }
-      .hero a {
-        font-size: 50px;
-      }
-      .product {
-        flex: 1 1 calc(50% - 20px); /* Tar upp 50% av bredden minus gap */
-        max-width: calc(50% - 20px);
-      }
-    }
+  .search-container {
+    width: 45%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 0px;
+    margin-bottom: 20px;
+  }
+  .headerlink a {
+    display: flex;
+    flex-direction: row;
+    color: black;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 15px;
+  }
+  .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .hero a {
+    font-size: 50px;
+  }
+  .product {
+    flex: 1 1 calc(50% - 20px); /* Tar upp 50% av bredden minus gap */
+    max-width: calc(50% - 20px);
+  }
+}
 
-    /*------------------------------1024px ---> ---------------------DESKTOP----------------------------------*/
-    @media (min-width: 1024px) {
-      .search-container {
-        width: 100%;
-        position: relative;
-        display: flex;
-        align-items: center;
-        padding-left: 0px;
-      }
+/*------------------------------1024px ---> ---------------------DESKTOP----------------------------------*/
+@media (min-width: 1024px) {
+  .search-container {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 0px;
+  }
 
-      .search {
-        width: 100%;
-        padding: 8px 30px 8px 25px;
-        font-size: 14px;
-        border: 2px solid #000000;
-        border-radius: 20px;
-      }
+  .search {
+    width: 100%;
+    padding: 8px 30px 8px 25px;
+    font-size: 14px;
+    border: 2px solid #000000;
+    border-radius: 20px;
+  }
 
-      .fa-solid.fa-magnifying-glass {
-        position: absolute;
-        left: 10px;
-        pointer-events: none;
-        color: #000000;
-        font-size: 14px;
-      }
-      .icons-container {
-        display: flex;
-        gap: 10px;
-        margin-left: 10px;
-      }
+  .fa-solid.fa-magnifying-glass {
+    position: absolute;
+    left: 10px;
+    pointer-events: none;
+    color: #000000;
+    font-size: 14px;
+  }
+  .icons-container {
+    display: flex;
+    gap: 10px;
+    margin-left: 10px;
+  }
 
-      .icons-container i {
-        font-size: 20px;
-        color: #000;
-        cursor: pointer;
-      }
+  .icons-container i {
+    font-size: 20px;
+    color: #000;
+    cursor: pointer;
+  }
 
-      .icons-container i:hover {
-        color: #807d7d;
-      }
+  .icons-container i:hover {
+    color: #807d7d;
+  }
 
-      .headerlink {
-        margin-top: 10px;
-        margin-left: 10px;
-      }
+  .headerlink {
+    margin-top: 10px;
+    margin-left: 10px;
+  }
 
-      .headerlink a {
-        color: black;
-        text-decoration: none;
-        font-weight: bold;
-        font-family: Arial, Helvetica, sans-serif;
-      }
-      .hero a {
-        color: black;
-        text-decoration: none;
-        font-weight: bold;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 50px;
-        text-align: center;
-        text-decoration: none;
-      }
-      .hero img {
-        display: grid;
-        grid-template-columns: 1fr;
-        margin-top: 10px;
-        gap: 10px;
-      }
-      .product {
-        flex: 1 1 calc(25% - 20px); /* Tar upp 25% av bredden minus gap */
-        max-width: calc(25% - 20px);
-      }
-      
-    }
+  .headerlink a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .hero a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    text-align: center;
+    text-decoration: none;
+  }
+  .hero img {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 10px;
+    gap: 10px;
+  }
+  .product {
+    flex: 1 1 calc(25% - 20px); /* Tar upp 25% av bredden minus gap */
+    max-width: calc(25% - 20px);
+  }
+}

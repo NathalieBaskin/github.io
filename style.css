@@ -1,590 +1,494 @@
-/*----------------------------------------------ALLMÄN STYLING--------------------------------------------*/
-
-
-/*----------------------------------------------HEADERLOGGA----------------------------------------------*/
-.logo-container {
-  display: grid;
-}
-
-.logo {
-  width: 100%;
-  height: auto;
-  margin-left: 0px;
-}
-.logo-full {
-  width: 70%;
-  margin-left: 0px;
-}
-/*----------------------------------------------SÖKFUNKTION-----------------------------------------------*/
-.search-container {
-  width: 100%;
-  position: relative;
-  display: flex;
-  align-items: center;
-  padding-left: 0px;
-}
-
-.search {
-  width: 100%;
-  padding: 8px 30px 8px 25px;
-  font-size: 14px;
-  border: 2px solid #000000;
-  border-radius: 20px;
-}
-
-.fa-solid.fa-magnifying-glass {
-  position: absolute;
-  left: 10px;
-  color: #000000;
-  font-size: 14px;
-}
-/*----------------------------------------------HEADERIKONER-----------------------------------------*/
-.icons-container a {
-  color: black;
-}
-.icons-container a:hover,
-.headerlink a:hover,
-.hero a:hover {
-  color: #5e0707; /* Färg vid hover */
-}
-
-.headerlink a {
-  display: grid;
-  margin-top: 5px;
-  margin-bottom: 10px;
-  color: black;
-  text-decoration: none;
-  font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
-}
-/*------------------------------------------------HERO---------------------------------------------------*/
-.hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  margin: 0 auto;
-}
-.hero a {
-  color: black;
-  text-decoration: none;
-  font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
-  text-decoration: none;
-}
-.hero img {
-  width: 100%;
-  height: auto;
-}
-/*----------------------------------------------PRODUKTBILDER-----------------------------------------------*/
-.products {
-  width: 100%; /* Se till att produkterna fyller hela skärmbredden */
-  display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(300px, 1fr)
-  ); /* Dynamiska kolumner */
-  place-items: center;
-  gap: 10px; /* Lägger till utrymme mellan produkterna */
-}
-
-.product-container {
-  position: relative;
-  margin: 0 auto; /* Centrerar varje produktcontainer */
-  width: 100%; /* Gör containern bredare för att fylla ut mer av bredden */
-}
-
-.product-container img {
-  display: block;
-  width: 100%; /* Se till att bilderna är responsiva */
-  height: auto;
-}
-.product-container i {
-  position: absolute;
-  bottom: 55px; /* Placerar ikonen 10px från botten */
-  right: 10px; /* Placerar ikonen 10px från höger */
-  color: rgb(255, 255, 255); /* Färgen på ikonen */
-  font-size: 24px; /* Storlek på hjärtikonen */
-  z-index: 1; /* Se till att ikonen ligger över bilden */
-}
-
-/* Animera när muspekaren är över hjärtat */
-.product-container a i.fa-heart,
-.icons-container a i.fa-heart {
-  transition: transform 0.3s ease; /* Gör övergången mjuk och långsam */
-}
-
-/* När muspekaren är över hjärtat */
-.product-container a:hover i.fa-heart,
-.icons-container a:hover i.fa-heart {
-  transform: scale(1.5); /* Förstora hjärtat till 1.2x storlek */
-  color: rgb(
-    120,
-    42,
-    42
-  ); /* Färga hjärtat rött för att visa att det är ifyllt (kan ändras vid behov) */
-}
-
-.product-info {
-  display: grid;
-  grid-template-rows: auto auto; /* Två rader: en för namn/pris och en för märket */
-  grid-row-gap: 5px; /* Lägger till lite utrymme mellan raderna */
-  text-align: left;
-  margin-top: 10px;
-  font-family: Arial, sans-serif;
-}
-
-.product-name-price {
-  display: grid;
-  grid-template-columns: 1fr auto; /* Namn till vänster, pris till höger */
-}
-
-.product-name {
-  font-weight: bold;
-}
-
-.product-price {
-  font-weight: bold;
-  color: #000; /* Prisets färg */
-  justify-self: end; /* Placerar priset längst till höger */
-}
-
-.product-brand {
-  font-size: 14px;
-  color: #000000; /* Färgen på märkesnamnet */
-}
-
-.badge {
-  position: absolute;
-  top: 2%; /* Placerar badge 10% från toppen av containern */
-  left: 7%; /* Placerar badge 10% från vänster sida av containern */
-  background-color: rgb(0, 0, 0); /* Röd bakgrund med transparens */
-  color: white; /* Vit textfärg */
-  padding: 5px 10px; /* Lite padding för att texten ska se bättre ut */
-  border-radius: 5px; /* Rundade hörn */
-  font-size: 20px; /* Teckenstorlek */
-}
-.badge-container {
-  position: relative;
-  display: inline-block;
-}
-/*-------------------------------------------------FOOTER-------------------------------------------------*/
-.footer {
-  width: 100vw; /* Säkerställ att footern täcker hela bredden */
-  background-color: #aaa5a5;
-  padding: 20px 0; /* Lägger till lite padding för bättre spacing */
-  position: relative; /* Se till att den syns */
-  z-index: 1;
-  margin-top: 20px; /* Lite mellanrum från resten av sidan */
-}
-.footericon-container {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 15px;
-  font-size: 16px;
-  color: black;
-  margin-top: 35px;
-  text-align: left;
-}
-
-.footericon-info {
-  display: flex;
-  align-items: left;
-  justify-content: left;
-}
-
-.footericon-info i {
-  margin-right: 10px; /* Utrymme mellan ikonen och texten */
-}
-
-.footericon-info p {
-  margin: 0;
-}
-/*------------------------------------------------ACCORDION-----------------------------------------------*/
-
-.accordion {
-  padding-top: 30px;
-  width: 90%;
-  margin-left: 10px;
-}
-
-.accordion-item {
-  border-bottom: 1px solid #ffffff;
-}
-
-.accordion-checkbox {
-  display: none;
-}
-.accordion-checkbox:checked + .accordion-button + .accordion-body {
-  max-height: 200px; /* Justera beroende på innehållets höjd */
-  padding: 10px;
-}
-
-.accordion-button {
-  background-color: #a5a2cb;
-  padding: 10px;
-  font-size: 1.25rem;
-  width: 100%;
-  text-align: center;
-  border: none;
-  cursor: pointer;
-  outline: none;
-  display: grid;
-}
-
-.accordion-button:hover {
-  background-color: #3983ce;
-}
-
-.accordion-body {
-  max-height: 0;
-  overflow: hidden;
-  background-color: #f8f9fa;
-}
-.accordion-body a {
-  display: block;
-  margin-top: 10px;
-  color: #000000;
-  text-decoration: none;
-}
-
-.accordion-body a:hover {
-  text-decoration: underline;
-}
-
-.button button {
-  margin-left: 100px;
-  place-items: center;
-  color: rgb(0, 0, 0);
-  background-color: white;
-  font-size: 16px;
-  padding: 10px;
-  cursor: pointer;
-}
-/* -------------------------------------------ADMINISTRATIONS SIDA, INDEX--------------------------------*/
-.header {
-  background-color: rgb(167, 167, 167);
-  text-align: center;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-}
-.sidebar {
-  background-color: #ddd;
-  height: 100vh; /* Gör så att sidomenyn sträcker sig över hela höjden */
-
-  position: fixed; /* Gör den fast så att den alltid är synlig när man scrollar */
-  top: 57px; /* Placera den högst upp */
-  left: 8px; /* Placera den till vänster */
-  padding-top: 20px; /* Lite padding överst för utrymme */
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Ger en subtil skugga till sidomenyn */
-}
-
-.sidebar h3 {
-  padding: 10px;
-  font-family: Arial, sans-serif;
-}
-.produktknapp {
-  display: grid;
-  grid-template-rows: auto auto; /* Två rader: en för namn/pris och en för märket */
-  grid-row-gap: 5px; /* Lägger till lite utrymme mellan raderna */
-  text-align: left;
-  margin-top: 10px;
-  font-family: Arial, sans-serif;
-}
-
-.produktknapp {
-  display: flex;
-  align-items: center; /* Vertikal centrering */
-  padding: 10px 0;
-}
-
-.produktrubrik {
-  font-weight: bold;
-  font-size: 16px;
-}
-
-.add-product-btn {
-  background-color: #000000;
-  color: white;
-  padding: 10px 10px;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-.add-product-btn:hover {
-  background-color: #45a049;
-}
-
-.main-content {
-  margin-left: 110px; /* Ge utrymme till huvudinnehållet för att undvika att överlappa med sidomenyn */
-}
-
-.main-content h2 {
-  margin-bottom: 25px;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-table,
-th,
-td {
-  border: 1px solid #ddd;
-}
-
-th,
-td {
-  padding: 10px;
-  text-align: left;
-}
-
-th {
-  background-color: #f2f2f2;
-}
-
-.add-product-btn {
-  display: inline-block;
-  margin-top: 20px;
-  margin-left: 120px;
-  padding: 10px 10px;
-  background-color: #000000;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-.add-product-btn:hover {
-  background-color: #45a049;
-}
-
-/*--------------------------0-640px-------------------MOBIL-----------------------------------------------*/
-
-@media (max-width: 640px) {
-
-  .logo {
-    width: 100%;
-    margin-left: 0px;
-    margin-bottom: 20px;
-  }
-  .icons-container {
-    display: flex;
-    gap: 10px;
-    padding-left: 10px;
-  }
-
-  .search-container {
-    width: 100%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding-left: 0px;
-    margin-bottom: 15px;
-  }
-
-  .search {
-    width: 85%;
-    padding: 8px 30px 8px 25px;
-    font-size: 14px;
-    border: 2px solid #000000;
-    border-radius: 20px;
-  }
-
-  .fa-solid.fa-magnifying-glass {
-    position: absolute;
-    left: 10px;
-    pointer-events: none; /* Förhindra pekarhändelser på ikonen */
-    color: #000000; /* Sätt ikonens färg */
-    font-size: 14px; /* Minska ikonen storlek */
-  }
-
-  .icons-container i {
-    font-size: 25px;
-  }
-
-  .headerlink a {
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-bottom: 15px;
-  }
-
-  .hero {
-    display: grid;
-    padding: 15px;
-    width: 90%;
-    font-size: 30px;
-    border: solid black;
-    border-radius: 20px;
-  }
-
-  .hero img {
-    width: 100%;
-    height: auto;
-    margin-top: 15px;
-    margin-bottom: 10px;
-  }
-  .products {
-    margin-top: 15px;
-    width: 100%; /* Se till att produkterna fyller hela skärmbredden */
-    display: grid;
-    grid-template-columns: 1fr; /* En kolumn i mobilläge */
-    place-items: center;
-    gap: 5px; /* Lägger till utrymme mellan produkterna */
-  }
-
-  .product-container {
-    position: relative;
-    margin: 0 auto; /* Centrerar varje produktcontainer */
-    width: 100%; /* Gör containern bredare för att fylla ut mer av bredden */
-    max-width: 300px; /* Maximal bredd för varje produkt i mobilläge */
-  }
-
-  .product-container img {
-    display: block;
-    width: 100%; /* Se till att bilderna är responsiva */
-    height: auto;
-  }
-}
-/*--------------------------640px-1024px-----------------------------IPAD--------------------------------*/
-
-@media (min-width: 640px) {
-  .logo-container {
-    display: flex; /* Skapa en flexbox-container */
-    align-items: left; /* Centrera vertikalt */
-  }
-  .logo {
-    width: 60%;
-    margin-left: 0px;
-  }
-  .hero {
-    font-size: 30px;
-    text-align: center;
-    text-decoration: none;
-    color: black;
-  }
-  .headerlink a {
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  .products {
-    width: 100%; /* Se till att produkterna fyller hela skärmbredden */
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    place-items: center;
-    gap: 20px; /* Lägger till utrymme mellan produkterna */
-    padding: 10px;
-  }
-
-  .product-container {
-    position: relative;
-    margin: 0 auto; /* Centrerar varje produktcontainer */
-    width: 100%; /* Gör containern bredare för att fylla ut mer av bredden */
-    max-width: 300px; /* Maximal bredd för varje produkt i mobilläge */
-  }
-
-  .product-container img {
-    display: block;
-    width: 100%; /* Se till att bilderna är responsiva */
-    height: auto;
-  }
-}
-
-/*------------------------------1024px ---> ---------------------DESKTOP----------------------------------*/
-@media (min-width: 1024px) {
-
-  .search-container {
-    width: 100%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding-left: 0px;
-  }
-
-  .search {
-    width: 100%;
-    padding: 8px 30px 8px 25px;
-    font-size: 14px;
-    border: 2px solid #000000;
-    border-radius: 20px;
-  }
-
-  .fa-solid.fa-magnifying-glass {
-    position: absolute;
-    left: 10px;
-    pointer-events: none; /* Förhindra pekarhändelser på ikonen */
-    color: #000000; /* Sätt ikonens färg */
-    font-size: 14px; /* Minska ikonen storlek */
-  }
-  .icons-container {
-    display: flex;
-    gap: 10px; /* Utrymme mellan ikonerna */
-    margin-left: 10px; /* Utrymme mellan sökrutan och ikonerna */
-  }
-
-  .icons-container i {
-    font-size: px; /* Storlek på ikonerna */
-    color: #000;
-    cursor: pointer;
-  }
-
-  /* Ikon-hover-effekt */
-  .icons-container i:hover {
-    color: #807d7d; /* Färg vid hover */
-  }
-
-  .headerlink {
-    margin-top: 10px;
-    margin-left: 10px;
-  }
-
-  .headerlink a {
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  .hero a {
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 50px;
-    text-align: center;
-    text-decoration: none;
-  }
-  .hero img {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin-top: 10px;
-    gap: 10px;
-  }
-
-  .products {
-    width: 100%; /* Se till att produkterna fyller hela skärmbredden */
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    place-items: center;
-    gap: 20px; /* Lägger till utrymme mellan produkterna */
-    padding: 10px;
-  }
-
-  .product-container {
-    position: relative;
-    margin: 0 auto; /* Centrerar varje produktcontainer */
-    width: 100%; /* Gör containern bredare för att fylla ut mer av bredden */
-    max-width: 300px; /* Maximal bredd för varje produkt i mobilläge */
-  }
-
-  .product-container img {
-    display: block;
-    width: 100%; /* Se till att bilderna är responsiva */
-    height: auto;
-  }
-}
+    /*------------------------------------------ALLMÄN STYLING--------------------------------------------*/
+
+    /*----------------------------------------------HEADERLOGGA----------------------------------------------*/
+    .logo-container {
+      display: grid;
+    }
+
+    .logo {
+      width: 100%;
+      height: auto;
+      margin-left: 0px;
+    }
+    .logo-full {
+      width: 70%;
+      margin-left: 0px;
+    }
+    /*----------------------------------------------SÖKFUNKTION-----------------------------------------------*/
+    .search-container {
+      width: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding-left: 0px;
+    }
+
+    .search {
+      width: 100%;
+      padding: 8px 30px 8px 25px;
+      font-size: 14px;
+      border: 2px solid #000000;
+      border-radius: 20px;
+    }
+
+    .fa-solid.fa-magnifying-glass {
+      position: absolute;
+      left: 10px;
+      color: #000000;
+      font-size: 14px;
+    }
+    /*----------------------------------------------HEADERIKONER-----------------------------------------*/
+    .icons-container a {
+      color: black;
+    }
+    .icons-container a:hover,
+    .headerlink a:hover,
+    .hero a:hover {
+      color: #5e0707; /* Färg vid hover */
+    }
+
+    .headerlink {
+      display: flex; /* Gör att länkarna placeras horisontellt */
+      justify-content: flex-start; /* Justerar länkarna till vänster */
+      gap: 20px; /* Lägger till mellanrum mellan länkarna */
+      margin-top: 10px;
+      margin-left: 10px;
+    }
+
+    .headerlink a {
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px; /* Gör texten lite större om det behövs */
+    }
+
+    /*------------------------------------------------HERO---------------------------------------------------*/
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin: 0 auto;
+    }
+    .hero a {
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+      text-decoration: none;
+    }
+    .hero img {
+      width: 100%;
+      height: auto;
+    }
+    /*----------------------------------------------PRODUKTBILDER-------------------------------------------*/
+    .product-grid {
+      display: flex;
+      flex-wrap: wrap; /* Gör att produkterna bryts till en ny rad om det behövs */
+      justify-content: center; /* Centrerar produkterna horisontellt */
+      gap: 20px; /* Utrymme mellan produkterna */
+      padding: 10px;
+    }
+    
+    /* Standard för mobiler under 640px - 1 bild per rad */
+    .product {
+      flex: 1 1 100%; /* Tar upp 100% av bredden */
+      max-width: 100%;
+    }
+    .product img {
+      width: 100%;
+      height: auto;
+    }
+    /*-------------------------------------------------FOOTER-------------------------------------------------*/
+    .footer {
+      width: 100vw;
+      background-color: #aaa5a5;
+      padding: 20px 0;
+      position: relative;
+      z-index: 1;
+      margin-top: 20px;
+    }
+    .footericon-container {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 15px;
+      font-size: 16px;
+      color: black;
+      margin-top: 35px;
+      text-align: left;
+    }
+
+    .footericon-info {
+      display: flex;
+      align-items: left;
+      justify-content: left;
+    }
+
+    .footericon-info i {
+      margin-right: 10px;
+    }
+
+    .footericon-info p {
+      margin: 0;
+    }
+    /*------------------------------------------------ACCORDION-----------------------------------------------*/
+
+    .accordion {
+      padding-top: 30px;
+      width: 90%;
+      margin-left: 10px;
+    }
+
+    .accordion-item {
+      border-bottom: 1px solid #ffffff;
+    }
+
+    .accordion-checkbox {
+      display: none;
+    }
+    .accordion-checkbox:checked + .accordion-button + .accordion-body {
+      max-height: 200px;
+      padding: 10px;
+    }
+
+    .accordion-button {
+      background-color: #a5a2cb;
+      padding: 10px;
+      font-size: 1.25rem;
+      width: 100%;
+      text-align: center;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      display: grid;
+    }
+
+    .accordion-button:hover {
+      background-color: #3983ce;
+    }
+
+    .accordion-body {
+      max-height: 0;
+      overflow: hidden;
+      background-color: #f8f9fa;
+    }
+    .accordion-body a {
+      display: block;
+      margin-top: 10px;
+      color: #000000;
+      text-decoration: none;
+    }
+
+    .accordion-body a:hover {
+      text-decoration: underline;
+    }
+
+    .button button {
+      margin-left: 100px;
+      place-items: center;
+      color: rgb(0, 0, 0);
+      background-color: white;
+      font-size: 16px;
+      padding: 10px;
+      cursor: pointer;
+    }
+    /* -------------------------------------------ADMINISTRATIONS SIDA, INDEX--------------------------------*/
+    .header {
+      background-color: rgb(167, 167, 167);
+      text-align: center;
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    }
+    .sidebar {
+      background-color: #ddd;
+      height: 100vh;
+
+      position: fixed;
+      top: 57px;
+      left: 8px;
+      padding-top: 20px;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .sidebar h3 {
+      padding: 10px;
+      font-family: Arial, sans-serif;
+    }
+    .produktknapp {
+      display: grid;
+      grid-template-rows: auto auto;
+      grid-row-gap: 5px;
+      text-align: left;
+      margin-top: 10px;
+      font-family: Arial, sans-serif;
+    }
+
+    .produktknapp {
+      display: flex;
+      align-items: center;
+      padding: 10px 0;
+    }
+
+    .produktrubrik {
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .add-product-btn {
+      background-color: #000000;
+      color: white;
+      padding: 10px 10px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .add-product-btn:hover {
+      background-color: #45a049;
+    }
+
+    .main-content {
+      margin-left: 110px;
+    }
+
+    .main-content h2 {
+      margin-bottom: 25px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    table,
+    th,
+    td {
+      border: 1px solid #ddd;
+    }
+
+    th,
+    td {
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    .add-product-btn {
+      display: inline-block;
+      margin-top: 20px;
+      margin-left: 120px;
+      padding: 10px 10px;
+      background-color: #000000;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .add-product-btn:hover {
+      background-color: #45a049;
+    }
+
+    /*--------------------------0-640px-------------------MOBIL-----------------------------------------------*/
+
+    @media (max-width: 640px) {
+      .logo {
+        width: 100%;
+        margin-left: 0px;
+        margin-bottom: 20px;
+      }
+      .icons-container {
+        display: flex;
+        gap: 10px;
+        padding-left: 10px;
+      }
+
+      .search-container {
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding-left: 0px;
+        margin-bottom: 15px;
+      }
+
+      .search {
+        width: 85%;
+        padding: 8px 30px 8px 25px;
+        font-size: 14px;
+        border: 2px solid #000000;
+        border-radius: 20px;
+      }
+
+      .fa-solid.fa-magnifying-glass {
+        font-size: 14px;
+        position: absolute;
+        left: 10px;
+        color: black;
+      }
+
+      .icons-container i {
+        font-size: 25px;
+      }
+      .headerlink {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 5px;
+      }
+      .headerlink a {
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-bottom: 15px;
+      }
+
+      .hero {
+        display: grid;
+        padding: 15px;
+        width: 90%;
+        font-size: 30px;
+        border: solid black;
+        border-radius: 20px;
+      }
+
+      .hero img {
+        width: 100%;
+        height: auto;
+        margin-top: 15px;
+        margin-bottom: 10px;
+      }
+      .product a {
+        display: flex;
+        flex-direction: column ;
+      }
+    }
+    /*--------------------------640px-1024px-----------------------------IPAD--------------------------------*/
+
+    @media (min-width: 640px) {
+      .logo-container {
+        display: flex;
+        align-items: left;
+      }
+      .logo {
+        width: 50%;
+        margin-left: 0px;
+        margin-right: 20px;
+      }
+      .icons-container {
+        display: flex;
+        gap: 10px;
+        margin-left: 60px;
+        font-size: 25px;
+      }
+
+      .search-container {
+        width: 45%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding-left: 0px;
+        margin-bottom: 20px;
+      }
+      .headerlink a {
+        display: flex;
+        flex-direction: row;
+        color: black;
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-bottom: 15px;
+      }
+      .hero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      .hero a {
+        font-size: 50px;
+      }
+      .product {
+        flex: 1 1 calc(50% - 20px); /* Tar upp 50% av bredden minus gap */
+        max-width: calc(50% - 20px);
+      }
+    }
+
+    /*------------------------------1024px ---> ---------------------DESKTOP----------------------------------*/
+    @media (min-width: 1024px) {
+      .search-container {
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding-left: 0px;
+      }
+
+      .search {
+        width: 100%;
+        padding: 8px 30px 8px 25px;
+        font-size: 14px;
+        border: 2px solid #000000;
+        border-radius: 20px;
+      }
+
+      .fa-solid.fa-magnifying-glass {
+        position: absolute;
+        left: 10px;
+        pointer-events: none;
+        color: #000000;
+        font-size: 14px;
+      }
+      .icons-container {
+        display: flex;
+        gap: 10px;
+        margin-left: 10px;
+      }
+
+      .icons-container i {
+        font-size: 20px;
+        color: #000;
+        cursor: pointer;
+      }
+
+      .icons-container i:hover {
+        color: #807d7d;
+      }
+
+      .headerlink {
+        margin-top: 10px;
+        margin-left: 10px;
+      }
+
+      .headerlink a {
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .hero a {
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 50px;
+        text-align: center;
+        text-decoration: none;
+      }
+      .hero img {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 10px;
+        gap: 10px;
+      }
+      .product {
+        flex: 1 1 calc(25% - 20px); /* Tar upp 25% av bredden minus gap */
+        max-width: calc(25% - 20px);
+      }
+      
+    }

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Svart t-shirt</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!--HEADERLOGGA-->
+    <header class="logo-container">
+      <img src="images/LOGGA.png" alt="Freaky Fashion logotyp" class="logo" />
+      <img src="images/LOGGA-HELSKÄRM.png" alt="" class="logo-full" />
+    </header>
+
+    <!--SÖKFÄLT, FAVORIT OCH KUNDKORG-->
+    <div class="search-container">
+      <input type="text" placeholder="Sök produkt" class="search" />
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <div class="icons-container">
+        <i class="fa-regular fa-heart"></i>
+        <i class="fa-solid fa-shopping-cart"></i>
+      </div>
+    </div>
+
+    <!--HEADERLÄNKAR-->
+    <div class="headerlink">
+      <a href="">Nyheter</a>
+      <a href="">Topplistan</a>
+      <a href="">Rea</a>
+      <a href="">Kampanjer</a>
+    </div>
+
+    <!--PRODUKTBILD-->
+    <div class="product-container">
+      <a href=""><i class="fa-regular fa-heart"></i></a>
+      <a href="http://127.0.0.1:5501/product-details.html">
+        <img src="images/svart-tshirt-2.png" alt="" />
+      </a>
+      <div class="product-info">
+        <div class="product-name-price">
+          <span class="product-name">Svart t-shirt</span>
+        </div>
+        <div class="product-brand">Levis</div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
+          accusamus, eveniet dolorum, ducimus iusto earum obcaecati inventore
+          iste distinctio expedita ipsam deleniti praesentium repudiandae, sed
+          esse! Reprehenderit praesentium distinctio quisquam.
+        </p>
+        <h3>199 kr</h3>
+      </div>
+    </div>
+    
+    <div class="button">
+        <button onclick="location.href='http://127.0.0.1:5501/index.html'">Lägg i varukorg</button>
+      </div>
+    
+
+    <!--FOOTER IKONER-->
+    <footer>
+      <div class="footericon-container">
+        <div class="footericon-info">
+          <i class="fa-solid fa-earth-europe"> </i>
+          <p>Gratis frakt och returer</p>
+        </div>
+
+        <div class="footericon-info">
+          <i class="fa-solid fa-plane"> </i>
+          <p>Expressfrakt</p>
+        </div>
+
+        <div class="footericon-info">
+          <i class="fa-solid fa-shield-heart"> </i>
+          <p>Säkra betalningar</p>
+        </div>
+
+        <div class="footericon-info">
+          <i class="fa-regular fa-face-smile"> </i>
+          <p>Nyheter varje dag</p>
+        </div>
+      </div>
+      <!--ACCORDION-->
+      <div class="accordion">
+        <div class="accordion-item">
+          <input
+            type="checkbox"
+            id="accordion-item-1"
+            class="accordion-checkbox"
+          />
+          <label for="accordion-item-1" class="accordion-button"
+            >Shopping</label
+          >
+          <div class="accordion-body">
+            <a href="#">Vinterjackor</a>
+            <a href="#">Pufferjackor</a>
+            <a href="#">Kappa</a>
+            <a href="#">Trenchcoats</a>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <input
+            type="checkbox"
+            id="accordion-item-2"
+            class="accordion-checkbox"
+          />
+          <label for="accordion-item-2" class="accordion-button"
+            >Mina sidor</label
+          >
+          <div class="accordion-body">
+            <a href="#">Mina ordrar</a>
+            <a href="#">Mitt konto</a>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <input
+            type="checkbox"
+            id="accordion-item-3"
+            class="accordion-checkbox"
+          />
+          <label for="accordion-item-3" class="accordion-button"
+            >Kundtjänst</label
+          >
+          <div class="accordion-body">
+            <a href="#">Returnpolicy</a>
+            <a href="#">Integritetspolicy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

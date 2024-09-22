@@ -365,6 +365,7 @@ th {
 /*--------------------------0-640px-------------------MOBIL-----------------------------------------------*/
 
 @media (max-width: 640px) {
+  
   .logo {
     width: 100%;
     margin-left: 0px;
@@ -386,41 +387,42 @@ th {
   }
 
   .search {
-    width: 85%;
-    padding: 8px 30px 8px 25px;
-    font-size: 14px;
-    border: 2px solid #000000;
+    width: 70%;
+    padding: 10px 40px 10px 35px;
+    font-size: 20px;
+    border: 3px solid #000000;
     border-radius: 20px;
   }
 
   .fa-solid.fa-magnifying-glass {
-    font-size: 14px;
+    font-size: 20px;
     position: absolute;
     left: 10px;
     color: black;
   }
 
   .icons-container i {
-    font-size: 25px;
+    font-size: 30px;
   }
   .headerlink {
     display: flex;
     flex-direction: column;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
   .headerlink a {
     color: black;
     text-decoration: none;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
+    font-size: 20px;
   }
 
   .hero {
     display: grid;
     padding: 15px;
     width: 90%;
-    font-size: 30px;
+    font-size: 50px;
     border: solid black;
     border-radius: 20px;
   }
@@ -432,8 +434,74 @@ th {
     margin-bottom: 10px;
   }
   .product {
-    flex: 1 1 100%; /* Varje bild tar upp 100% av bredden */
-    max-width: 100%; /* Säkerställer att varje produkt tar hela bredden */
+    flex: 1 1 100% !important;
+    max-width: 100% !important;
+  }
+  .product-grid i {
+    position: absolute;
+    bottom: 100px;
+    right: 15px;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    z-index: 1;
+  }
+
+  .product-grid a i.fa-heart,
+  .icons-container a i.fa-heart {
+    transition: transform 0.3s ease;
+  }
+
+  .product-grid a:hover i.fa-heart,
+  .icons-container a:hover i.fa-heart {
+    transform: scale(1.5);
+    color: rgb(120, 42, 42);
+  }
+
+  .product-info {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-row-gap: 5px;
+    text-align: left;
+    margin-top: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+  }
+
+  .product-name-price {
+    display: grid;
+    grid-template-columns: 1fr auto;
+  }
+
+  .product-name {
+    font-weight: bold;
+  }
+
+  .product-price {
+    font-weight: bold;
+    color: #000;
+    justify-self: end;
+  }
+
+  .product-brand {
+    font-size: 14px;
+    color: #000000;
+    font-size: 30px;
+  }
+
+  .badge-container {
+    position: relative;
+    width: 100%;
+  }
+
+  .badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 20px;
   }
 }
 /*--------------------------640px-1024px-----------------------------IPAD--------------------------------*/
@@ -478,14 +546,85 @@ th {
     justify-content: center;
     align-items: center;
     text-align: center;
+    border: solid black 5px; /* Mindre border */
+    border-radius: 10px; /* Mindre hörnrundning */
+    padding: 0; /* Ta bort padding */
+    width: 100%; /* Säkerställ att den tar upp hela bredden */
   }
-  .hero a {
-    font-size: 50px;
-  }
-  .product {
-    flex: 1 1 calc(50% - 20px); /* Tar upp 50% av bredden minus gap */
-    max-width: calc(50% - 20px);
-  }
+}
+.hero a {
+  font-size: 50px;
+}
+.product {
+  flex: 1 1 calc(50% - 20px); /* Tar upp 50% av bredden minus gap */
+  max-width: calc(50% - 20px);
+}
+.product-grid i {
+  position: absolute;
+  bottom: 100px;
+  right: 15px;
+  color: rgb(255, 255, 255);
+  font-size: 50px;
+  z-index: 1;
+}
+
+.product-grid a i.fa-heart,
+.icons-container a i.fa-heart {
+  transition: transform 0.3s ease;
+}
+
+.product-grid a:hover i.fa-heart,
+.icons-container a:hover i.fa-heart {
+  transform: scale(1.5);
+  color: rgb(120, 42, 42);
+}
+
+.product-info {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-row-gap: 5px;
+  text-align: left;
+  margin-top: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+}
+
+.product-name-price {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+.product-name {
+  font-weight: bold;
+}
+
+.product-price {
+  font-weight: bold;
+  color: #000;
+  justify-self: end;
+}
+
+.product-brand {
+  font-size: 14px;
+  color: #000000;
+  font-size: 16px;
+}
+
+/* Badge-layout */
+.badge-container {
+  position: relative;
+  width: 100%;
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 30px;
 }
 
 /*------------------------------1024px ---> ---------------------DESKTOP----------------------------------*/
@@ -496,31 +635,33 @@ th {
     display: flex;
     align-items: center;
     padding-left: 0px;
+    padding-top: 15px;
   }
 
   .search {
     width: 100%;
-    padding: 8px 30px 8px 25px;
-    font-size: 14px;
+    padding: 15px 30px 15px 30px;
+    font-size: 25px;
     border: 2px solid #000000;
     border-radius: 20px;
+    margin-left: 20px;
   }
 
   .fa-solid.fa-magnifying-glass {
     position: absolute;
-    left: 10px;
+    left: 25px;
     pointer-events: none;
     color: #000000;
-    font-size: 14px;
+    font-size: 25px;
   }
   .icons-container {
     display: flex;
     gap: 10px;
-    margin-left: 10px;
+    margin-left: 80px;
   }
 
   .icons-container i {
-    font-size: 20px;
+    font-size: 50px;
     color: #000;
     cursor: pointer;
   }
@@ -539,24 +680,98 @@ th {
     text-decoration: none;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+  }
+  .hero {
+    border: solid black 5px; /* Mindre border */
+    border-radius: 10px; /* Mindre hörnrundning */
+    padding: 0; /* Ta bort padding */
+    width: 100%; /* Säkerställ att den tar upp hela bredden */
   }
   .hero a {
     color: black;
     text-decoration: none;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 50px;
+    font-size: 85px;
     text-align: center;
     text-decoration: none;
   }
   .hero img {
+    width: 90%;
+    height: auto;
     display: grid;
     grid-template-columns: 1fr;
     margin-top: 10px;
-    gap: 10px;
   }
   .product {
     flex: 1 1 calc(25% - 20px); /* Tar upp 25% av bredden minus gap */
     max-width: calc(25% - 20px);
+  }
+  .product-grid i {
+    position: absolute;
+    bottom: 75px;
+    right: 15px;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    z-index: 1;
+  }
+
+  .product-grid a i.fa-heart,
+  .icons-container a i.fa-heart {
+    transition: transform 0.3s ease;
+  }
+
+  .product-grid a:hover i.fa-heart,
+  .icons-container a:hover i.fa-heart {
+    transform: scale(1.5);
+    color: rgb(120, 42, 42);
+  }
+
+  .product-info {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-row-gap: 5px;
+    text-align: left;
+    margin-top: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 25px;
+  }
+
+  .product-name-price {
+    display: grid;
+    grid-template-columns: 1fr auto;
+  }
+
+  .product-name {
+    font-weight: bold;
+  }
+
+  .product-price {
+    font-weight: bold;
+    color: #000;
+    justify-self: end;
+  }
+
+  .product-brand {
+    font-size: 14px;
+    color: #000000;
+    font-size: 20px;
+  }
+
+  .badge-container {
+    position: relative;
+    width: 100%;
+  }
+
+  .badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 30px;
   }
 }

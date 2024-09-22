@@ -85,23 +85,44 @@
       height: auto;
     }
     /*----------------------------------------------PRODUKTBILDER-------------------------------------------*/
-    .product-grid {
-      display: flex;
-      flex-wrap: wrap; /* Gör att produkterna bryts till en ny rad om det behövs */
-      justify-content: center; /* Centrerar produkterna horisontellt */
-      gap: 20px; /* Utrymme mellan produkterna */
-      padding: 10px;
-    }
-    
-    /* Standard för mobiler under 640px - 1 bild per rad */
-    .product {
-      flex: 1 1 100%; /* Tar upp 100% av bredden */
-      max-width: 100%;
-    }
-    .product img {
-      width: 100%;
-      height: auto;
-    }
+    /* Produkter container */
+.product-grid {
+  display: flex;
+  flex-wrap: wrap; /* Låter produkterna brytas till en ny rad */
+  justify-content: center; /* Centrerar produkterna */
+  gap: 20px; /* Mellanrum mellan produkterna */
+  padding: 10px;
+}
+
+/* Produkterna - allmän layout */
+.product {
+  flex: 1 1 calc(25% - 20px); /* 4 bilder per rad på breda skärmar */
+  max-width: calc(25% - 20px);
+  position: relative; /* Behåll för badge-positionering */
+}
+
+.product img {
+  width: 100%;
+  height: auto; /* Automatisk höjd för att bibehålla proportioner */
+  display: block;
+}
+
+/* Badge-layout */
+.badge-container {
+  position: relative;
+  width: 100%;
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
     /*-------------------------------------------------FOOTER-------------------------------------------------*/
     .footer {
       width: 100vw;

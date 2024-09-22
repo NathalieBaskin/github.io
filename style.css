@@ -106,6 +106,54 @@
   height: auto; /* Automatisk höjd för att bibehålla proportioner */
   display: block;
 }
+.product-grid i {
+  position: absolute;
+  bottom: 55px;
+  right: 10px;
+  color: rgb(255, 255, 255);
+  font-size: 24px;
+  z-index: 1;
+}
+
+.product-grid a i.fa-heart,
+.icons-container a i.fa-heart {
+  transition: transform 0.3s ease;
+}
+
+.product-grid a:hover i.fa-heart,
+.icons-container a:hover i.fa-heart {
+  transform: scale(1.5);
+  color: rgb(120, 42, 42);
+}
+
+.product-info {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-row-gap: 5px;
+  text-align: left;
+  margin-top: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.product-name-price {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+.product-name {
+  font-weight: bold;
+}
+
+.product-price {
+  font-weight: bold;
+  color: #000;
+  justify-self: end;
+}
+
+.product-brand {
+  font-size: 14px;
+  color: #000000;
+}
 
 /* Badge-layout */
 .badge-container {

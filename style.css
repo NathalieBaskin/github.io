@@ -97,23 +97,12 @@
   height: auto;
 }
 
-.bild-container .text-ett, .text-två, .text-tre {
-  position: absolute;
-  bottom: 50%;
-  left: 50%;
-  transform: translate(-50%, 50%);
-  color: rgb(0, 0, 0);
-  padding: 5px;
-  font-size: 30px;
-  font-family:Arial, Helvetica, sans-serif;
-  text-transform: uppercase;
-  font-weight: bold;
-  transition: color 0.3s ease;
-  cursor: pointer;
-}
+
 
 /* Ändrar färg endast när muspekaren är över själva texten */
-.text-ett:hover, .text-två:hover, .text-tre:hover {
+.text-ett:hover,
+.text-två:hover,
+.text-tre:hover {
   color: rgb(112, 5, 5); /* Endast den texten du hovrar över blir svart */
 }
 
@@ -244,7 +233,8 @@
   gap: 40px;
   padding: 10px;
   background-color: #f8f8f8; /* Grå bakgrund som i skärmdumpen */
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .footerinfo div {
@@ -493,7 +483,7 @@ th {
     display: grid;
     padding: 15px;
     width: 90%;
-    font-size: 50px;
+    font-size: 35px;
     border: solid black;
     border-radius: 20px;
   }
@@ -647,20 +637,15 @@ th {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-
-   
   }
   .search {
     font-size: 25px;
     margin-left: 5px;
   }
-    .fa-solid.fa-magnifying-glass {
-      font-size: 25px;
-      position: absolute;
-      color: black;
-      
-
-    
+  .fa-solid.fa-magnifying-glass {
+    font-size: 25px;
+    position: absolute;
+    color: black;
   }
   .headerlink a {
     font-size: 25px;
@@ -688,7 +673,7 @@ th {
   }
   .spotbilder {
     display: none;
-    }
+  }
   .product {
     flex: 1 1 calc(50% - 20px);
     max-width: calc(50% - 20px);
@@ -784,7 +769,8 @@ th {
     display: flex;
     align-items: left;
     justify-content: left;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   }
 
   .footericon-info i {
@@ -802,47 +788,44 @@ th {
     gap: 40px;
     font-size: 16px;
     padding: 10px;
-    background-color: #f8f8f8; 
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #f8f8f8;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   }
-  
+
   .footerinfo div {
     display: flex;
-    flex-direction: column; 
-    gap: 10px; 
+    flex-direction: column;
+    gap: 10px;
   }
-  
+
   .footerinfo p {
     font-weight: bold;
     font-size: 25px;
     text-decoration: underline;
   }
-  
+
   .footerinfo a {
     text-decoration: none;
     color: black;
     font-size: 20px;
-    
   }
-  
+
   .footerinfo a:hover {
     text-decoration: underline; /* Understrykning vid hover */
   }
-.copyright {
-  text-align: center; /* Centrerar texten i footern */
-  color: #000000; /* Ändra färgen till en mörkare nyans */
-  font-size: 20px; /* Anpassa storleken på texten */
-  font-family: Arial, sans-serif; /* Välj en specifik font om du vill */
-  padding: 20px 0; /* Lägger till lite padding för utrymme runt copyright-texten */
-  margin-bottom: 10px;
+  .copyright {
+    text-align: center; /* Centrerar texten i footern */
+    color: #000000; /* Ändra färgen till en mörkare nyans */
+    font-size: 20px; /* Anpassa storleken på texten */
+    font-family: Arial, sans-serif; /* Välj en specifik font om du vill */
+    padding: 20px 0; /* Lägger till lite padding för utrymme runt copyright-texten */
+    margin-bottom: 10px;
+  }
+  .accordion {
+    display: none;
+  }
 }
-.accordion {
-  display: none;
-}
-}
-
-
-
 
 /*------------------------------1024px ---> ---------------------DESKTOP----------------------------------*/
 @media (min-width: 1024px) {
@@ -935,7 +918,9 @@ th {
     height: auto;
   }
 
-  .text-ett, .text-två, .text-tre {
+  .text-ett,
+  .text-två,
+  .text-tre {
     position: absolute;
     bottom: 50%;
     left: 50%;
@@ -1034,7 +1019,7 @@ th {
     margin-top: 20px;
   }
   .footericon-container {
-    display:flex;
+    display: flex;
     gap: 15px;
     font-size: 23px;
     color: rgb(0, 0, 0);
@@ -1159,14 +1144,16 @@ th {
     height: auto;
   }
 
-  .text-ett, .text-två, .text-tre {
+  .text-ett,
+  .text-två,
+  .text-tre {
     position: absolute;
     bottom: 50%;
     left: 50%;
     transform: translate(-50%, 50%);
     color: rgb(0, 0, 0);
     padding: 5px;
-    font-size: 30px;
+    font-size: 50px;
     font-family: Arial, Helvetica, sans-serif;
     text-transform: uppercase;
     font-weight: bold;

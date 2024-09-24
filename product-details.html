@@ -8,10 +8,9 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="style.css">
-  
+    <link rel="stylesheet" href="style.css" />
   </head>
-  
+
   <body>
     <!-----------------------------------------------------------------HEADERLOGGA------------------------>
     <header class="logo-container">
@@ -38,11 +37,11 @@
     <div class="productsida-grid">
       <!-- Bildsektion -->
       <div class="product-sida">
-        <a href="http://127.0.0.1:5501/product-details.html">
-          <img src="images/svart-tshirt-5.png" alt="Svart t-shirt 5" />
-        </a>
+        <img src="images/svart-tshirt-5.png" alt="Svart t-shirt 5" />
+        <i class="fa-solid fa-heart heart-icon"></i>
+        <!-- Hjärtikonen inuti product-sida -->
       </div>
-    
+
       <!-- Text, pris och knappsektion -->
       <div class="product-details">
         <div class="product-detalj">
@@ -64,33 +63,47 @@
         </div>
       </div>
     </div>
-  
-<div class="slideshow-container">
-  <div slide-text>
-    <p>liknande produkter</p>
-  </div>
-  <div class="slideshow-wrapper">
-    <div class="slide">
-      <a href="produkt-lank-1.html">
-        <img src="images/svart-tshirt-1.png" alt="Produkt 1">
-   
-      </a>
-    </div>
-    <div class="slide">
-      <a href="produkt-lank-2.html">
-        <img src="images/svart-tshirt-3.png" alt="Produkt 2">
-    
-      </a>
-    </div>
-    <div class="slide">
-      <a href="produkt-lank-3.html">
-        <img src="images/svart-tshirt-8.png" alt="Produkt 3">
-    
-      </a>
-    </div>
-  </div>
-</div>
 
+    <div class="slider">
+      <div class="slidertext">
+        <p>Liknande produkter</p>
+      </div>
+      
+      <!-- Radio-buttons för navigering -->
+      <input type="radio" name="slider" id="slide1" checked>
+      <input type="radio" name="slider" id="slide2">
+      <input type="radio" name="slider" id="slide3">
+    
+      <div class="slides">
+        <!-- Slide 1 -->
+        <div class="slide">
+          <a href="#link1"><img src="images/1.slide.png" alt="Bild 1"></a>
+          <a href="#link2"><img src="images/2.slide.png" alt="Bild 2"></a>
+          <a href="#link3"><img src="images/3.slide.png" alt="Bild 3"></a>
+        </div>
+        <!-- Slide 2 -->
+        <div class="slide">
+          <a href="#link4"><img src="images/4.slide.png" alt="Bild 4"></a>
+          <a href="#link5"><img src="images/5.slide.png" alt="Bild 5"></a>
+          <a href="#link6"><img src="images/6.slide.png" alt="Bild 6"></a>
+        </div>
+        <!-- Slide 3 -->
+        <div class="slide">
+          <a href="#link7"><img src="images/7.slide.png" alt="Bild 7"></a>
+          <a href="#link8"><img src="images/8.slide.png" alt="Bild 8"></a>
+          <a href="#link9"><img src="images/9.slide.png" alt="Bild 9"></a>
+        </div>
+      </div>
+    
+      <!-- Navigeringsknappar -->
+      <div class="nav-container">
+        <label for="slide1" class="nav"></label>
+        <label for="slide2" class="nav"></label>
+        <label for="slide3" class="nav"></label>
+      </div>
+    </div>
+    
+    
     
 
     <!--FOOTER IKONER-->

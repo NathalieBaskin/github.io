@@ -5,7 +5,7 @@
   display: grid;
 }
 
-.logo {
+.logo a {
   width: 100%;
   height: auto;
   margin-left: 0px;
@@ -14,13 +14,14 @@
 .search-container {
   width: 100%;
   position: relative;
+  justify-content: space-between; 
   display: flex;
   align-items: center;
   padding-left: 0px;
 }
 
 .search {
-  width: 100%;
+  width: 35%;
   padding: 8px 30px 8px 25px;
   font-size: 14px;
   border: 2px solid #000000;
@@ -33,6 +34,9 @@
   color: #000000;
   font-size: 14px;
 }
+
+
+
 /*----------------------------------------------HEADERIKONER-----------------------------------------*/
 .icons-container a {
   color: black;
@@ -102,22 +106,22 @@
 
 .product-grid {
   display: flex;
-  flex-wrap: wrap; /* Låter produkterna brytas till en ny rad */
-  justify-content: center; /* Centrerar produkterna */
-  gap: 20px; /* Mellanrum mellan produkterna */
+  flex-wrap: wrap; 
+  justify-content: center; 
+  gap: 20px; 
   padding: 10px;
 }
 
-/* Produkterna - allmän layout */
+
 .product {
-  flex: 1 1 calc(25% - 20px); /* 4 bilder per rad på breda skärmar */
+  flex: 1 1 calc(25% - 20px); 
   max-width: calc(25% - 20px);
-  position: relative; /* Behåll för badge-positionering */
+  position: relative; 
 }
 
 .product img {
   width: 100%;
-  height: auto; /* Automatisk höjd för att bibehålla proportioner */
+  height: auto; 
   display: block;
 }
 .product-grid i {
@@ -356,7 +360,6 @@ input[type="radio"] {
 /*-------------------------------------------------FOOTER-------------------------------------------------*/
 .footer {
   width: 100vw;
-  background-color: #aaa5a5;
   padding: 20px 0;
   position: relative;
   z-index: 1;
@@ -391,8 +394,7 @@ input[type="radio"] {
 .footerinfo {
   display: flex;
   gap: 40px;
-  padding: 10px;
-  background-color: #f8f8f8;
+  margin-bottom: 0px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
@@ -418,13 +420,13 @@ input[type="radio"] {
   text-decoration: underline;
 }
 .copyright {
-  text-align: center;
   color: #000000;
-  font-size: 14px;
+  font-size: 20px;
   font-family: Arial, sans-serif;
-  padding: 20px 0;
-  margin-bottom: 10px;
+  text-align: center;
+  background-color: #ffffff;
 }
+
 /*------------------------------------------------ACCORDION-----------------------------------------------*/
 
 .accordion {
@@ -476,113 +478,17 @@ input[type="radio"] {
 .accordion-body a:hover {
   text-decoration: underline;
 }
-
 .button button {
   margin-left: 100px;
   place-items: center;
   color: rgb(0, 0, 0);
   background-color: white;
   font-size: 16px;
-  padding: 10px;
   cursor: pointer;
 }
+
 /* -------------------------------------------ADMINISTRATIONS SIDA, INDEX--------------------------------*/
-.header {
-  background-color: rgb(167, 167, 167);
-  text-align: center;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-}
-.sidebar {
-  background-color: #ddd;
-  height: 100vh;
 
-  position: fixed;
-  top: 57px;
-  left: 8px;
-  padding-top: 20px;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-}
-
-.sidebar h3 {
-  padding: 10px;
-  font-family: Arial, sans-serif;
-}
-.produktknapp {
-  display: grid;
-  grid-template-rows: auto auto;
-  grid-row-gap: 5px;
-  text-align: left;
-  margin-top: 10px;
-  font-family: Arial, sans-serif;
-}
-
-.produktknapp {
-  display: flex;
-  align-items: center;
-  padding: 10px 0;
-}
-
-.produktrubrik {
-  font-weight: bold;
-  font-size: 16px;
-}
-
-.add-product-btn {
-  background-color: #000000;
-  color: white;
-  padding: 10px 10px;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-.add-product-btn:hover {
-  background-color: #45a049;
-}
-
-.main-content {
-  margin-left: 110px;
-}
-
-.main-content h2 {
-  margin-bottom: 25px;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-table,
-th,
-td {
-  border: 1px solid #ddd;
-}
-
-th,
-td {
-  padding: 10px;
-  text-align: left;
-}
-
-th {
-  background-color: #f2f2f2;
-}
-
-.add-product-btn {
-  display: inline-block;
-  margin-top: 20px;
-  margin-left: 120px;
-  padding: 10px 10px;
-  background-color: #000000;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-.add-product-btn:hover {
-  background-color: #45a049;
-}
 
 /*--------------------------0-640px-------------------MOBIL-----------------------------------------------*/
 
@@ -628,7 +534,7 @@ th {
   .headerlink {
     display: flex;
     flex-direction: column;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
   .headerlink a {
     color: black;
@@ -638,21 +544,29 @@ th {
     margin-bottom: 5px;
     font-size: 20px;
   }
-
   .hero {
-    display: grid;
-    padding: 15px;
-    width: 90%;
-    font-size: 35px;
-    border: solid black;
-    border-radius: 20px;
+    border: solid black 10px;
+    border-radius: 50px;
+    padding: 0;
+    width: 95%;
   }
-
+  .hero a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 50px;
+  }
   .hero img {
-    width: 100%;
+    width: 90%;
     height: auto;
-    margin-top: 15px;
-    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 50px;
+    margin-bottom: 50px;
   }
   .product {
     flex: 1 1 100% !important;
@@ -772,14 +686,7 @@ th {
   .footericon-info p {
     margin: 0;
   }
-  .copyright {
-    text-align: center;
-    color: #000000;
-    font-size: 14px;
-    font-family: Arial, sans-serif;
-    padding: 20px 0;
-    margin-bottom: 10px;
-  }
+
   .spotbilder {
     display: none;
   }
@@ -795,32 +702,39 @@ th {
     align-items: left;
   }
   .logo {
-    width: 50%;
+    width: 45%;
     margin-left: 0px;
-    margin-right: 20px;
+    margin-right: 0px;
   }
   .icons-container {
+    margin-right: 50px; 
     display: flex;
-    gap: 10px;
-    margin-left: 60px;
-    font-size: 35px;
+    gap: 20px;
   }
-
+  .icons-container i {
+    font-size: 40px;
+    color: #000;
+    cursor: pointer;
+  }
   .search-container {
-    width: 45%;
-    position: relative;
+    width: 100%; 
     display: flex;
+    justify-content: space-between; 
     align-items: center;
-    margin-bottom: 20px;
+
   }
   .search {
-    font-size: 25px;
-    margin-left: 5px;
+    width: 35%; 
+    margin-left: 25px;
+    font-size: 20px;
   }
+
   .fa-solid.fa-magnifying-glass {
-    font-size: 25px;
     position: absolute;
-    color: black;
+    left: 30px;
+    pointer-events: none;
+    color: #000000;
+    font-size: 20px;
   }
   .headerlink a {
     font-size: 25px;
@@ -831,20 +745,31 @@ th {
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 15px;
+    
   }
   .hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border: solid black 5px;
-    border-radius: 10px;
+    border: solid black 10px;
+    border-radius: 50px;
     padding: 0;
-    width: 100%;
+    width: 95%;
   }
-
   .hero a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 50px;
+  }
+  .hero img {
+    width: 90%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 50px;
+    margin-bottom: 50px;
   }
   .spotbilder {
     display: none;
@@ -935,7 +860,7 @@ th {
   }
   .product-sida .fa-heart {
     position: absolute;
-    bottom: 5%; /* Justera baserat på önskad position */
+    bottom: 5%; 
     right: 8%;
     font-size: 2em;
     color: rgb(255, 255, 255);
@@ -1016,7 +941,6 @@ th {
     display: flex;
     gap: 40px;
     font-size: 16px;
-    padding: 10px;
     background-color: #f8f8f8;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -1043,14 +967,7 @@ th {
   .footerinfo a:hover {
     text-decoration: underline;
   }
-  .copyright {
-    text-align: center;
-    color: #000000;
-    font-size: 20px;
-    font-family: Arial, sans-serif;
-    padding: 20px 0;
-    margin-bottom: 10px;
-  }
+ 
   .accordion {
     display: none;
   }
@@ -1058,47 +975,41 @@ th {
 
 /*------------------------------1024px ---> ---------------------DESKTOP----------------------------------*/
 @media (min-width: 1024px) {
-  .logo {
-    width: 50%;
+  .logo a {
+    width: 100%;
     height: auto;
     margin-left: 60px;
   }
 
-  .search-container {
-    width: 50%;
-    position: relative;
+  .icons-container {
+    margin-right: 50px; 
     display: flex;
-    align-items: center;
-    padding-left: 0px;
-    padding-top: 15px;
+    gap: 20px;
   }
+  .icons-container i {
+    font-size: 40px;
+    color: #000;
+    cursor: pointer;
+  }
+  .search-container {
+    width: 100%; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
 
+  }
   .search {
-    width: 50%;
-    padding: 15px 30px 15px 30px;
-    font-size: 25px;
-    border: 5px solid #000000;
-    border-radius: 20px;
-    margin-left: 20px;
+    width: 35%; 
+    margin-left: 25px;
+    font-size: 20px;
   }
 
   .fa-solid.fa-magnifying-glass {
     position: absolute;
-    left: 25px;
+    left: 30px;
     pointer-events: none;
     color: #000000;
-    font-size: 25px;
-  }
-  .icons-container {
-    display: flex;
-    gap: 35px;
-    margin-left: 50px;
-  }
-
-  .icons-container i {
-    font-size: 50px;
-    color: #000;
-    cursor: pointer;
+    font-size: 20px;
   }
 
   .icons-container i:hover {
@@ -1129,9 +1040,10 @@ th {
     text-decoration: none;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 100px;
+    font-size: 60px;
     text-align: center;
     text-decoration: none;
+    margin-bottom: 50px;
   }
   .hero img {
     width: 90%;
@@ -1139,7 +1051,7 @@ th {
     display: grid;
     grid-template-columns: 1fr;
     margin-top: 50px;
-    margin-bottom: 25px;
+    margin-bottom: 50px;
   }
   .spotbilder {
     display: grid;
@@ -1182,7 +1094,7 @@ th {
   }
   .product-grid i {
     position: absolute;
-    bottom: 60px;
+    bottom: 75px;
     right: 15px;
     color: rgb(255, 255, 255);
     font-size: 30px;
@@ -1207,7 +1119,7 @@ th {
     text-align: left;
     margin-top: 10px;
     font-family: Arial, sans-serif;
-    font-size: 20px;
+    font-size: 25px;
   }
 
   .product-name-price {
@@ -1228,24 +1140,24 @@ th {
   .product-brand {
     font-size: 14px;
     color: #000000;
-    font-size: 15px;
+    font-size: 20px;
   }
 
   .product-details {
     display: flex;
-    flex-direction: column; /* Gör att elementen staplas vertikalt */
-    align-items: flex-start; /* Justerar innehållet till vänster */
-    max-width: 50%; /* Sätt en maximal bredd för texten */
-    text-align: left; /* Textjustering till vänster */
+    flex-direction: column; 
+    align-items: flex-start;
+    max-width: 50%; 
+    text-align: left; 
 }
   .productsida-grid {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 40px; /* Utrymme mellan bild och text */
+    gap: 40px; 
 }
   .product-sida img {
-    width: 80%; /* Öka bildens storlek */
+    width: 80%; 
     height: auto;
     display: block;
     margin: 0 auto;
@@ -1257,13 +1169,13 @@ th {
 }
 
 .product-sida-brand {
-  font-size: 30px; /* Öka textstorleken för varumärket */
+  font-size: 30px;
   color: #333;
   margin-bottom: 10px;
 }
 
 .pris {
-  font-size: 30px; /* Öka textstorleken för priset */
+  font-size: 30px; 
   color: #000;
   font-weight: bold;
   margin-bottom: 15px;
@@ -1271,20 +1183,20 @@ th {
 }
 
 .lorem {
-  font-size: 25px; /* Öka textstorleken för beskrivningstexten */
+  font-size: 25px; 
   margin-bottom: 20px;
 }
 .varukorg button {
-  font-size: 24px; /* Öka knapptextens storlek */
-  padding: 15px 30px; /* Gör knappen större */
-  background-color: #ffffff; /* Exempel på att justera knappens bakgrundsfärg */
+  font-size: 24px; 
+  padding: 15px 30px; 
+  background-color: #ffffff;  bakgrundsfärg */
   color: rgb(0, 0, 0);
   border-radius: 10px;
   cursor: pointer;
 }
 .product-sida .fa-heart {
   position: absolute;
-  bottom: 5%; /* Justera baserat på önskad position */
+  bottom: 5%; 
   right: 12%;
   font-size: 40px;
   color: rgb(255, 255, 255);
@@ -1323,7 +1235,6 @@ th {
   .footer {
     width: 100vw;
     background-color: #aaa5a5;
-    padding: 20px 0;
     position: relative;
     z-index: 1;
     margin-top: 60px;
@@ -1331,7 +1242,7 @@ th {
   .footericon-container {
     display: flex;
     justify-content: center;
-    gap: 60px;
+    gap: 20px;
     font-size: 20px;
     color: rgb(0, 0, 0);
     margin-top: 30px;
@@ -1340,6 +1251,11 @@ th {
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   }
 
+  .footerinfo a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+  }
   .footericon-info {
     display: flex;
     align-items: left;
@@ -1353,14 +1269,7 @@ th {
   .footericon-info p {
     margin: 0;
   }
-  .copyright {
-    text-align: center;
-    color: #000000;
-    font-size: 25px;
-    font-family: Arial, sans-serif;
-    padding: 20px 0;
-    margin-bottom: 10px;
-  }
+
 }
 
 /*------------------------------1200px ---> ---------------------DESKTOP----------------------------------*/
@@ -1371,41 +1280,35 @@ th {
     margin-left: 60px;
   }
 
-  .search-container {
-    width: 50%;
-    position: relative;
+  .icons-container {
+    margin-right: 50px; 
     display: flex;
-    align-items: center;
-    padding-left: 0px;
-    padding-top: 15px;
+    gap: 20px;
   }
+  .icons-container i {
+    font-size: 40px;
+    color: #000;
+    cursor: pointer;
+  }
+  .search-container {
+    width: 100%; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
 
+  }
   .search {
-    width: 50%;
-    padding: 15px 30px 15px 30px;
-    font-size: 25px;
-    border: 5px solid #000000;
-    border-radius: 20px;
-    margin-left: 20px;
+    width: 35%; 
+    margin-left: 25px;
+    font-size: 20px;
   }
 
   .fa-solid.fa-magnifying-glass {
     position: absolute;
-    left: 25px;
+    left: 30px;
     pointer-events: none;
     color: #000000;
-    font-size: 25px;
-  }
-  .icons-container {
-    display: flex;
-    gap: 35px;
-    margin-left: 50px;
-  }
-
-  .icons-container i {
-    font-size: 50px;
-    color: #000;
-    cursor: pointer;
+    font-size: 20px;
   }
 
   .icons-container i:hover {
@@ -1436,9 +1339,10 @@ th {
     text-decoration: none;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 100px;
+    font-size: 80px;
     text-align: center;
     text-decoration: none;
+    margin-bottom: 50px;
   }
   .hero img {
     width: 90%;
@@ -1446,7 +1350,7 @@ th {
     display: grid;
     grid-template-columns: 1fr;
     margin-top: 50px;
-    margin-bottom: 25px;
+    margin-bottom: 50px;
   }
   .spotbilder {
     display: grid;
@@ -1489,10 +1393,10 @@ th {
   }
   .product-grid i {
     position: absolute;
-    bottom: 60px;
+    bottom: 85px;
     right: 15px;
     color: rgb(255, 255, 255);
-    font-size: 30px;
+    font-size: 40px;
     z-index: 1;
   }
 
@@ -1514,7 +1418,7 @@ th {
     text-align: left;
     margin-top: 10px;
     font-family: Arial, sans-serif;
-    font-size: 20px;
+    font-size: 30px;
   }
 
   .product-name-price {
@@ -1535,24 +1439,24 @@ th {
   .product-brand {
     font-size: 14px;
     color: #000000;
-    font-size: 15px;
+    font-size: 28px;
   }
 
   .product-details {
     display: flex;
-    flex-direction: column; /* Gör att elementen staplas vertikalt */
-    align-items: flex-start; /* Justerar innehållet till vänster */
-    max-width: 50%; /* Sätt en maximal bredd för texten */
-    text-align: left; /* Textjustering till vänster */
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 50%;
+    text-align: left; 
 }
   .productsida-grid {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 40px; /* Utrymme mellan bild och text */
+    gap: 40px; 
 }
   .product-sida img {
-    width: 80%; /* Öka bildens storlek */
+    width: 80%; 
     height: auto;
     display: block;
     margin: 0 auto;
@@ -1564,13 +1468,13 @@ th {
 }
 
 .product-sida-brand {
-  font-size: 30px; /* Öka textstorleken för varumärket */
+  font-size: 30px; 
   color: #333;
   margin-bottom: 10px;
 }
 
 .pris {
-  font-size: 30px; /* Öka textstorleken för priset */
+  font-size: 30px; 
   color: #000;
   font-weight: bold;
   margin-bottom: 15px;
@@ -1578,20 +1482,20 @@ th {
 }
 
 .lorem {
-  font-size: 25px; /* Öka textstorleken för beskrivningstexten */
+  font-size: 25px;
   margin-bottom: 20px;
 }
 .varukorg button {
-  font-size: 24px; /* Öka knapptextens storlek */
-  padding: 15px 30px; /* Gör knappen större */
-  background-color: #ffffff; /* Exempel på att justera knappens bakgrundsfärg */
+  font-size: 24px; 
+  padding: 15px 30px; 
+  background-color: #ffffff; 
   color: rgb(0, 0, 0);
   border-radius: 10px;
   cursor: pointer;
 }
 .product-sida .fa-heart {
   position: absolute;
-  bottom: 2%; /* Justera baserat på önskad position */
+  bottom: 2%;
   right: 12%;
   font-size: 45px;
   color: rgb(255, 255, 255);
@@ -1631,8 +1535,7 @@ th {
   }
   .footer {
     width: 100vw;
-    background-color: #aaa5a5;
-    padding: 20px 0;
+    background-color: #b9b9b9;
     position: relative;
     z-index: 1;
     margin-top: 60px;
@@ -1640,8 +1543,8 @@ th {
   .footericon-container {
     display: flex;
     justify-content: center;
-    gap: 80px;
-    font-size: 20px;
+    gap: 20px;
+    font-size: 25px;
     color: rgb(0, 0, 0);
     margin-top: 30px;
     text-align: left;
@@ -1655,6 +1558,11 @@ th {
     justify-content: left;
   }
 
+  .footerinfo a {
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+  }
   .footericon-info i {
     margin-right: 10px;
   }
@@ -1662,13 +1570,5 @@ th {
   .footericon-info p {
     margin: 0;
   }
-  .copyright {
-    text-align: center;
-    color: #000000;
-    font-size: 25px;
-    font-family: Arial, sans-serif;
-    padding: 20px 0;
-    margin-bottom: 10px;
-  }
-}
 
+}

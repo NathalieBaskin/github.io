@@ -1,48 +1,57 @@
 <!DOCTYPE html>
 <html lang="sv">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administration</title>
-    <link rel="stylesheet" href="../../style.css" />
-  </head>
-  <body>
-    <div class="header">
-      <h2>Administration</h2>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="admin.css"> 
+</head>
+<body>
+  <header class="admin-header">
+    <h1>Administration</h1>
+  </header>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Produkter</h2>
+        </aside>
+        
+        <main class="main-content">
+            <div class="header-row">
+                <h1>Produkter</h1>
+                <a href="new-product.html" class="btn">Ny produkt</a>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Namn</th>
+                        <th>SKU</th>
+                        <th>Pris</th>
+                        <th>Åtgärder</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Svart T-Shirt</td>
+                        <td>AAA111</td>
+                        <td>199</td>
+                        <td>
+                            <a href="#" class="edit"><i class="fa-solid fa-pen-to-square"></i></a>
+                            <a href="#" class="delete"><i class="fa-solid fa-trash"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Vit T-Shirt</td>
+                        <td>BBB111</td>
+                        <td>199</td>
+                        <td>
+                            <a href="#" class="edit"><i class="fa-solid fa-pen-to-square"></i></a>
+                            <a href="#" class="delete"><i class="fa-solid fa-trash"></i></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
     </div>
-
-    <div class="sidebar">
-      <h3>Produkter</h3>
-    </div>
-
-    <!-- Main Content -->
-    <div class="main-content">
-        <div class="produktknapp">
-            <span class="produktrubrik">Produkter</span>
-            <span class="produktknapp"><a href="ny-produkt.html" class="add-product-btn">Ny produkt</a></span>
-      </div>
-    </div>
-    <table>
-      <thead>
-        <tr>
-          <th>Namn</th>
-          <th>SKU</th>
-          <th>Pris</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Svart T-Shirt</td>
-          <td>AAA111</td>
-          <td>199 kr</td>
-        </tr>
-        <tr>
-          <td>Vit T-Shirt</td>
-          <td>BBB111</td>
-          <td>199 kr</td>
-        </tr>
-        <!-- Lägg till fler produkter här -->
-      </tbody>
-    </table>
-  </body>
+</body>
 </html>

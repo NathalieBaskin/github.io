@@ -1,4 +1,4 @@
-/*-----Generella stilar-----*/
+/*----------------------------------------------GENERELLA STILAR--------------------------------------*/
 .icons-container a,
 .headerlink a,
 .hero a {
@@ -30,8 +30,6 @@
   }
   .logo {
     width: 50%;
-    margin-left: 0px;
-    margin-right: 0px;
   }
 }
 
@@ -123,7 +121,6 @@
 }
 .hero a {
   font-size: 2em;
-  text-align: center;
   text-decoration: none;
   margin-bottom: 50px;
 }
@@ -332,7 +329,7 @@
 }
 
 .product-sida img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   display: block;
   margin: 0 auto;
@@ -341,15 +338,17 @@
   position: relative;
 }
 
-.heart-icon {
+.product-sida .fa-heart {
   position: absolute;
-  font-size: 24px;
+  bottom: 5%;
+  right: 5%;
+  font-size: 2em;
   color: rgb(255, 255, 255);
   z-index: 10;
   transition: transform 0.3s ease;
 }
 
-.heart-icon:hover {
+.product-sida .fa-heart:hover {
   transform: scale(1.5);
   color: rgb(120, 42, 42);
 }
@@ -384,10 +383,12 @@
 }
 .button {
   display: inline-block;
+  padding: 10px 15px;
   background-color: #ffffff;
   color: rgb(0, 0, 0);
   text-align: center;
   text-decoration: none;
+  font-size: 16px;
   border-radius: 5px;
   border: 2px solid black;
   cursor: pointer;
@@ -401,41 +402,11 @@
 }
 /*-----MOBIL----*/
 @media (max-width: 640px) {
-  .product-sida .fa-heart {
-    position: absolute;
-    bottom: 5%;
-    right: 5%;
-    font-size: 1em;
-    color: rgb(255, 255, 255);
-    z-index: 10;
-    transition: transform 0.3s ease;
-  }
-
-  .product-sida .fa-heart:hover {
-    transform: scale(1.5);
-    color: rgb(120, 42, 42);
-  }
-  .button {
-    display: inline-block;
-    padding: 10px 15px;
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 2px solid black;
-    cursor: pointer;
-    transition-duration: 0.3s;
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  }
 }
 
 /*-----IPAD----*/
 @media (min-width: 641px) {
   .productsida-grid {
-    display: flex;
     justify-content: space-between;
     align-items: flex-start;
     gap: 20px;
@@ -445,7 +416,6 @@
   .product-sida {
     flex: 1;
     max-width: 50%;
-    position: relative;
   }
 
   .product-details {
@@ -454,45 +424,10 @@
     text-align: left;
   }
 
-  .product-sida img {
-    max-width: 100%;
-    height: auto;
-  }
-
   .lorem,
   .pris,
   .varukorg {
     text-align: left;
-  }
-  .product-sida .fa-heart {
-    position: absolute;
-    bottom: 5%;
-    right: 8%;
-    font-size: 2em;
-    color: rgb(255, 255, 255);
-    z-index: 10;
-    transition: transform 0.3s ease;
-  }
-
-  .product-sida .fa-heart:hover {
-    transform: scale(1.5);
-    color: rgb(120, 42, 42);
-    cursor: pointer;
-  }
-  .button {
-    display: inline-block;
-    padding: 10px 15px;
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 2px solid black;
-    cursor: pointer;
-    transition-duration: 0.3s;
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   }
 }
 
@@ -511,64 +446,22 @@
     align-items: flex-start;
     gap: 40px;
   }
-  .product-sida img {
-    width: 80%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-  }
+
   .product-sida-name {
-    font-size: 40px;
-    font-weight: bold;
     margin-bottom: 20px;
   }
 
   .product-sida-brand {
-    font-size: 30px;
-    color: #333;
     margin-bottom: 10px;
   }
 
   .pris {
-    font-size: 30px;
-    color: #000;
-    font-weight: bold;
     margin-bottom: 15px;
     text-align: center;
   }
 
   .lorem {
-    font-size: 25px;
     margin-bottom: 20px;
-  }
-  .button {
-    display: inline-block;
-    padding: 10px 15px;
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 2px solid black;
-    cursor: pointer;
-    transition-duration: 0.3s;
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  }
-  .product-sida .fa-heart {
-    position: absolute;
-    bottom: 5%;
-    right: 12%;
-    font-size: 40px;
-    color: rgb(255, 255, 255);
-    z-index: 10;
-    transition: transform 0.3s ease;
-  }
-
-  .product-sida .fa-heart:hover {
-    transform: scale(1.5);
-    color: rgb(120, 42, 42);
   }
 }
 
@@ -579,40 +472,39 @@
   text-transform: capitalize;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 3em;
+  font-weight: bold;
 }
+
 .slider {
   position: relative;
   width: 100%;
-  max-width: 2000px;
   overflow: hidden;
   margin: 0 auto;
-  margin-top: 100px;
+  margin-top: 15px;
 }
 
 .slides {
   display: flex;
-  width: 300%; /* Bredden på alla slides tillsammans */
+  width: 300%;
   transition: transform 0.5s ease-in-out;
 }
 
 .slide {
-  width: 100%; /* Varje slide tar upp 100% av förälderns bredd */
+  width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center; /* Center the images */
+  gap: 20px; /* Add a small gap between images */
 }
+
 .slide a {
-  display: inline-block;
   text-decoration: none;
 }
 
 .slide a img {
-  width: 100%;
+  width: 90%; /* Increase image size to 90% of the container */
   height: auto;
-  display: block;
-}
-.slide img {
-  width: 32%;
-  height: auto;
+  margin: 0 auto; /* Center images within each slide */
 }
 
 input[type="radio"] {
@@ -649,8 +541,9 @@ input[type="radio"] {
 #slide1:checked ~ .nav-container .nav:nth-child(1),
 #slide2:checked ~ .nav-container .nav:nth-child(2),
 #slide3:checked ~ .nav-container .nav:nth-child(3) {
-  background-color: #333;
+  background-color: #000000;
 }
+
 /*-----MOBIL----*/
 @media (max-width: 640px) {
   .slider {
@@ -658,31 +551,6 @@ input[type="radio"] {
   }
 }
 
-/*-----IPAD----*/
-@media (min-width: 641px) {
-  .slider p {
-    text-align: center;
-    text-transform: capitalize;
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-    font-size: 2em;
-  }
-  .slide {
-    gap: 10px;
-  }
-}
-
-/*-----DATOR----*/
-@media (min-width: 1024px) {
-  .slideshow-container p {
-    font-size: 40px;
-    text-align: center;
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-    text-transform: capitalize;
-    font-weight: bold;
-  }
-}
 /*-------------------------------------------------FOOTER-------------------------------------------------*/
 .footer {
   width: 100vw;
@@ -690,9 +558,6 @@ input[type="radio"] {
   position: relative;
   z-index: 1;
   margin-top: 20px;
-
- 
-
 }
 .footericon-container {
   display: grid;
@@ -705,14 +570,12 @@ input[type="radio"] {
   margin-left: 15px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-    
 }
 
 .footericon-info {
   display: flex;
   align-items: center;
   text-align: left;
-  
 }
 
 .footericon-info i {
@@ -728,7 +591,7 @@ input[type="radio"] {
   margin-bottom: 0px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-    background-color: #d8d8d8;
+  background-color: #d8d8d8;
 }
 
 .footerinfo div {

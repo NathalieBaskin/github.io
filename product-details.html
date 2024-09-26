@@ -9,23 +9,24 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
   </head>
 
   <body>
     <!-----------------------------------------------------------------HEADERLOGGA------------------------>
     <header class="logo-container">
-     <img src="images/LOGGA.png" alt="Freaky Fashion logotyp" class="logo" />   
-    </div>
-     <div class="search-container">
+      <img src="images/LOGGA.png" alt="Freaky Fashion logotyp" class="logo" />
+      <div class="search-container">
         <input type="text" placeholder="Sök produkt" class="search" />
         <i class="fa-solid fa-magnifying-glass"></i>
         <div class="icons-container">
           <a href=""> <i class="fa-regular fa-heart"></i></a>
           <a href=""> <i class="fa-solid fa-shopping-cart"></i></a>
         </div>
+      </div>
     </header>
 
-    <!--HEADERLÄNKAR-->
+    <!-------------------------------------------------------------------HEADERLÄNKAR----------------------->
     <div class="headerlink">
       <a href="">Nyheter</a>
       <a href="">Topplistan</a>
@@ -33,16 +34,13 @@
       <a href="">Kampanjer</a>
     </div>
 
-    <!--PRODUKTBILD-->
+    <!--------------------------------------------------------------------PRODUKTBILD---------------------->
     <div class="productsida-grid">
-      <!-- Bildsektion -->
       <div class="product-sida">
         <img src="images/svart-tshirt-5.png" alt="Svart t-shirt 5" />
         <i class="fa-solid fa-heart heart-icon"></i>
-        <!-- Hjärtikonen inuti product-sida -->
       </div>
 
-      <!-- Text, pris och knappsektion -->
       <div class="product-details">
         <div class="product-detalj">
           <div class="product-name-price">
@@ -57,31 +55,28 @@
           <h3>199 kr</h3>
         </div>
         <div class="varukorg">
-          <button onclick="location.href='http://127.0.0.1:5501/kassa.html'">
-            Lägg i varukorg
-          </button>
+          <a href="" class="button">Lägg i varukorg</a>
         </div>
       </div>
     </div>
-
+    <!-----------------------------------------------------------------------SLIDESHOW-------------------->
     <div class="slider">
       <div class="slidertext">
         <p>Liknande produkter</p>
       </div>
 
-      <!-- Radio-buttons för navigering -->
       <input type="radio" name="slider" id="slide1" checked />
       <input type="radio" name="slider" id="slide2" />
       <input type="radio" name="slider" id="slide3" />
 
       <div class="slides">
-        <!-- Slide 1 -->
+        <!-- SLIDE 1 -->
         <div class="slide">
           <a href="#link1"><img src="images/1.slide.png" alt="Bild 1" /></a>
           <a href="#link2"><img src="images/2.slide.png" alt="Bild 2" /></a>
           <a href="#link3"><img src="images/3.slide.png" alt="Bild 3" /></a>
         </div>
-        <!-- Slide 2 -->
+        <!-- SLIDE 2 -->
         <div class="slide">
           <a href="#link4"><img src="images/4.slide.png" alt="Bild 4" /></a>
           <a href="#link5"><img src="images/5.slide.png" alt="Bild 5" /></a>
@@ -95,7 +90,7 @@
         </div>
       </div>
 
-      <!-- Navigeringsknappar -->
+      <!-- NAVIGERINGSKNAPPAR -->
       <div class="nav-container">
         <label for="slide1" class="nav"></label>
         <label for="slide2" class="nav"></label>
@@ -103,7 +98,7 @@
       </div>
     </div>
 
-    <!--FOOTER IKONER-->
+    <!-------------------------------------------------------------------------------FOOTER--------------->
     <footer>
       <div class="footericon-container">
         <div class="footericon-info">
@@ -127,7 +122,6 @@
         </div>
       </div>
 
-      <!-------------------------------------ACCORDION----------------------------------------------------->
       <div class="accordion">
         <div class="accordion-item">
           <input
@@ -175,12 +169,6 @@
           <div class="accordion-body">
             <a href="#">Returnpolicy</a>
             <a href="#">Integritetspolicy</a>
-            <a href="http://127.0.0.1:5501/admin/products/new.html"
-              >Admin:index</a
-            >
-            <a href="http://127.0.0.1:5501/admin/products/index.html#"
-              >Admin:Ny produkt</a
-            >
           </div>
         </div>
         <div class="accordion-item">

@@ -110,7 +110,7 @@
 }
 @media (min-width: 1024px) {
   .headerlink a {
- font-size: 1.5em;
+    font-size: 1.5em;
   }
   .icons-container {
     font-size: 2em;
@@ -139,26 +139,25 @@
   margin-top: 50px;
   margin-bottom: 50px;
 }
-@media (min-width: 641px){
+@media (min-width: 641px) {
   .hero a {
     font-size: 4em;
   }
 }
 @media (min-width: 1024px) {
-.hero {
-  flex-direction: row-reverse;
-}
-.hero img {
-  width: 60%;
-  padding: 20px;
-}
-.hero a {
-  font-size: 4em;
-  margin-right: 30px;
-}
+  .hero {
+    flex-direction: row-reverse;
+  }
+  .hero img {
+    width: 60%;
+    padding: 20px;
+  }
+  .hero a {
+    font-size: 4em;
+    margin-right: 30px;
+  }
 }
 @media (min-width: 1200px) {
-
 }
 /*----------------------------------------------SPOTBILDER-------------------------------------------*/
 .spotbilder {
@@ -336,7 +335,7 @@
   }
   .product-grid i {
     bottom: 85px;
-}
+  }
 }
 /*----------------------------------------------PRODUKTSIDA-------------------------------------------*/
 .productsida-grid {
@@ -344,8 +343,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 40px ;
-  
+  gap: 40px;
 }
 .productsida-grid i {
   position: absolute;
@@ -397,7 +395,6 @@
 .product-sida-brand {
   color: #000000;
   font-size: 1.2em;
- 
 }
 
 .pris {
@@ -421,7 +418,6 @@
   border: 2px solid black;
   cursor: pointer;
   transition-duration: 0.3s;
- 
 }
 
 .button:hover {
@@ -429,9 +425,9 @@
 }
 
 @media (max-width: 640px) {
-.lorem  {
-  text-align: left;
-}
+  .lorem {
+    text-align: left;
+  }
 }
 /*-----IPAD----*/
 @media (min-width: 641px) {
@@ -465,19 +461,15 @@
   .product-details {
     display: flex;
     flex-direction: column;
-
   }
   .productsida-grid {
     display: flex;
-   
-   
   }
-
 }
 
 /*---------------------------------PRODUKTSIDA - SLIDEDHOW-------------------------------------------*/
 
-.slider p {
+.slider h2 {
   text-align: center;
   text-transform: capitalize;
   font-size: 1.8em;
@@ -559,10 +551,161 @@ input[type="radio"] {
     display: none;
   }
 }
+/*------------------------------------------------KASSAN-------------------------------------------------*/
+.kassa {
+  text-align: center;
+}
+
+.product-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.product-kassa {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #000;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 0.7em;
+}
+
+.product-info-kassa {
+  display: flex;
+  flex-direction: column;
+}
+
+.unit-price {
+  font-size: 0.8em;
+  color: gray;
+  margin-top: 5px;
+}
+
+.total-price {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.product-table {
+  display: none;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.product-table th,
+.product-table td {
+  border: 1px solid #000;
+  padding: 10px;
+  text-align: left;
+}
+.product-table th {
+  background-color: grey;
+}
+.titel {
+  font-weight: bold;
+}
+.kunduppgifter {
+  margin-top: 30px;
+  font-size: 1em;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.adress {
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #000;
+}
+#email {
+  width: 45%;
+}
+#fornamn,
+#efternamn {
+  width: 91%;
+}
+.button-kassa {
+  background-color: #fff;
+  color: #000;
+  padding: 10px 20px;
+  border: 1px solid #000;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.checkbox-group {
+  text-align: left;
+}
+
+@media (min-width: 641px) {
+  .kassa {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .titel {
+    text-align: left;
+    font-size: 1.1em;
+  }
+  .kunduppgifter {
+    display: grid;
+
+    gap: 30px;
+    text-align: left;
+  }
+
+  .name-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .product-table {
+    display: table;
+    margin: 20px auto;
+  }
+
+  .product-list {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .kassa {
+    width: 80%;
+    font-size: 2em;
+  }
+  .kunduppgifter {
+    gap: 30px;
+  }
+
+  .button-kassa {
+    font-size: 1.2em;
+    width: 300px;
+  }
+  .form-group input {
+    padding: 30px;
+  }
+}
 
 /*-------------------------------------------------FOOTER-------------------------------------------------*/
 
-footer{
+footer {
   width: 100%;
   margin: 0;
   padding-left: 20px;
@@ -571,12 +714,11 @@ footer{
   z-index: 1;
   margin-top: 30px;
   box-sizing: border-box;
-  
 }
 .footericon-container {
   display: grid;
   gap: 20px;
- 
+  align-items: center;
   font-size: 1em;
   color: rgb(0, 0, 0);
   background-color: #ffffff;
@@ -584,6 +726,7 @@ footer{
 
 .footericon-info {
   display: flex;
+  align-items: center;
 }
 
 .footericon-info i {
@@ -597,7 +740,6 @@ footer{
   display: flex;
   gap: 35px;
   margin: 0;
-  background-color: rgb(156, 147, 147);
 }
 
 .footerinfo div {
@@ -631,7 +773,6 @@ footer{
   .footericon-container {
     margin-top: 65px;
     grid-template-columns: repeat(1, 1fr);
-
   }
   .footerinfo {
     display: none;
@@ -640,7 +781,8 @@ footer{
 @media (min-width: 641px) {
   .footericon-container {
     grid-template-columns: repeat(2, 1fr);
-    margin-left: 20%;
+    justify-items: center;
+    align-items: center;
   }
 }
 
@@ -655,8 +797,8 @@ footer{
   .footerinfo {
     font-size: 2em;
   }
-    .footericon-info {
-      font-size: 2em;
+  .footericon-info {
+    font-size: 2em;
   }
   .copyright {
     font-size: 1.1em;

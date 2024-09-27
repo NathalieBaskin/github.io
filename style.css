@@ -212,6 +212,7 @@
   justify-content: center;
   gap: 20px;
   padding: 10px;
+  margin-bottom: 50px;
 }
 
 .product {
@@ -227,7 +228,7 @@
 }
 .product-grid i {
   position: absolute;
-  bottom: 90px;
+  bottom: 65px;
   right: 15px;
   color: rgb(255, 255, 255);
   font-size: 2em;
@@ -258,6 +259,7 @@
   display: grid;
   grid-template-columns: 1fr auto;
   font-weight: bold;
+  font-size: 0.8em;
 }
 
 .product-price {
@@ -265,7 +267,7 @@
 }
 
 .product-brand {
-  font-size: 1em;
+  font-size: 0.7em;
 }
 .badge-container {
   position: relative;
@@ -311,6 +313,8 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  gap: 40px ;
+  
 }
 .productsida-grid i {
   position: absolute;
@@ -343,7 +347,7 @@
   position: absolute;
   bottom: 40px;
   right: 25px;
-  font-size: 2.5em;
+  font-size: 2em;
   color: rgb(255, 255, 255);
   z-index: 10;
   transition: transform 0.3s ease;
@@ -355,7 +359,6 @@
 }
 
 .product-sida-name {
-  margin-top: 15px;
   font-weight: bold;
   font-size: 1.5em;
 }
@@ -363,17 +366,17 @@
 .product-sida-brand {
   color: #000000;
   font-size: 1.2em;
+ 
 }
 
 .pris {
   text-align: left;
-  margin-top: 10px;
-  font-size: 1em;
+  font-size: 1.5em;
 }
 
 .lorem {
-  font-size: 1.2em;
-  text-align: center;
+  font-size: 1em;
+  text-align: left;
 }
 .button {
   display: inline-block;
@@ -387,6 +390,7 @@
   border: 2px solid black;
   cursor: pointer;
   transition-duration: 0.3s;
+ 
 }
 
 .button:hover {
@@ -403,7 +407,6 @@
   .productsida-grid {
     justify-content: space-between;
     align-items: flex-start;
-    gap: 20px;
     flex-direction: row;
     cursor: pointer;
   }
@@ -431,34 +434,14 @@
   .product-details {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+
   }
   .productsida-grid {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 40px;
+   
+   
   }
 
-  .product-sida-name {
-    margin-bottom: 20px;
-    font-size: 2em;
-  }
-
-  .product-sida-brand {
-    margin-bottom: 10px;
-    font-size: 1.7em;
-  }
-
-  .pris {
-    margin-bottom: 15px;
-    font-size: 2em;
-  }
-
-  .lorem {
-    margin-bottom: 20px;
-    font-size: 1.9em;
-  }
 }
 
 /*---------------------------------PRODUKTSIDA - SLIDEDHOW-------------------------------------------*/
@@ -551,16 +534,18 @@ input[type="radio"] {
 footer{
   width: 100%;
   margin: 0;
-  padding: 0;
+  padding-left: 20px;
   background-color: rgb(156, 147, 147);
   position: relative;
   z-index: 1;
-  margin-top: 20px;
+  margin-top: 30px;
   box-sizing: border-box;
+  
 }
 .footericon-container {
   display: grid;
   gap: 20px;
+ 
   font-size: 1em;
   color: rgb(0, 0, 0);
   background-color: #ffffff;

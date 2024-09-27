@@ -1,4 +1,7 @@
 /*----------------------------------------------GENERELLA STILAR--------------------------------------*/
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
 .icons-container a,
 .headerlink a,
 .hero a {
@@ -7,9 +10,7 @@
   font-weight: bold;
   cursor: pointer;
 }
-* {
-  font-family: Arial, Helvetica, sans-serif;
-}
+
 /*----------------------------------------------HEADERLOGGA----------------------------------------------*/
 .logo-container {
   display: grid;
@@ -103,11 +104,21 @@
   .headerlink a {
     flex-direction: row;
   }
+  .icons-container {
+    font-size: 1.5em;
+  }
 }
-
+@media (min-width: 1024px) {
+  .headerlink a {
+ font-size: 1.5em;
+  }
+  .icons-container {
+    font-size: 2em;
+  }
+}
 /*------------------------------------------------HERO---------------------------------------------------*/
 .hero {
-  border: solid black 5px;
+  border: solid black 3px;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
@@ -117,7 +128,7 @@
   margin: 0 auto;
 }
 .hero a {
-  font-size: 2em;
+  font-size: 3em;
   text-decoration: none;
   margin-bottom: 50px;
   text-align: center;
@@ -128,15 +139,26 @@
   margin-top: 50px;
   margin-bottom: 50px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 641px){
   .hero a {
     font-size: 4em;
   }
 }
+@media (min-width: 1024px) {
+.hero {
+  flex-direction: row-reverse;
+}
+.hero img {
+  width: 60%;
+  padding: 20px;
+}
+.hero a {
+  font-size: 4em;
+  margin-right: 30px;
+}
+}
 @media (min-width: 1200px) {
-  .hero a {
-    font-size: 5em;
-  }
+
 }
 /*----------------------------------------------SPOTBILDER-------------------------------------------*/
 .spotbilder {
@@ -306,6 +328,15 @@
     flex: 1 1 calc(25% - 20px);
     max-width: calc(25% - 20px);
   }
+  .product-name-price {
+    font-size: 1.1em;
+  }
+  .product-brand {
+    font-size: 1em;
+  }
+  .product-grid i {
+    bottom: 85px;
+}
 }
 /*----------------------------------------------PRODUKTSIDA-------------------------------------------*/
 .productsida-grid {
@@ -626,6 +657,9 @@ footer{
   }
     .footericon-info {
       font-size: 2em;
+  }
+  .copyright {
+    font-size: 1.1em;
   }
 }
 /*------------------------------------------------ACCORDION-----------------------------------------------*/

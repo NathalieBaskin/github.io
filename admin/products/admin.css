@@ -1,4 +1,4 @@
-
+/*GEMENSAMT*/
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +14,7 @@ body {
     background-color: black;
     color: white;
     padding: 20px;
-    width: 100%; 
+    width: 100%;
 }
 
 .admin-header h1 {
@@ -31,7 +31,7 @@ body {
 
 .sidebar {
     width: 250px;
-    background-color: #dbdbdb;
+    background-color: #777575;
     color: #000000;
     padding: 20px;
 }
@@ -43,13 +43,6 @@ body {
 .main-content {
     flex-grow: 1;
     padding: 20px;
-}
-
-.header-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
 }
 
 h1, h2 {
@@ -69,6 +62,48 @@ h1, h2 {
 
 .btn:hover {
     background-color: #c1c3c4;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.checkbox-group label {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+    transform: scale(1.5);
+    margin-right: 10px;
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    width: 150px;
+}
+
+.submit-btn:hover {
+    background-color: #555;
+}
+
+/*INDEX*/
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
 table {
@@ -118,87 +153,93 @@ td a.delete:hover i {
     transition: 0.2s ease-in-out;
 }
 
-/* Namn */
+/*NY PRODUKT*/
 .form-group-name {
     margin-bottom: 20px;
 }
+
 .form-group-name label {
     display: block;
     margin-bottom: 5px;
     font-size: 20px;
     font-weight: bold;
 }
+
 .input-field-name {
-    width: 40%;
+    width: 30%;
     padding: 15px;
     font-size: 20px;
     border: 2px solid #000000;
 }
 
-/* Beskrivning */
 .form-group {
     margin-bottom: 20px;
 }
+
 .form-group label {
     display: block;
     margin-bottom: 5px;
     font-size: 20px;
     font-weight: bold;
 }
+
 .input-field {
-    width: 60%;
+    width: 40%;
     padding: 15px;
     font-size: 20px;
     border: 2px solid #000000;
 }
 
-/* SKU */
 .form-group-sku {
     margin-top: 10px;
     margin-bottom: 20px;
 }
+
 .form-group-sku label {
     display: block;
     margin-bottom: 5px;
     font-size: 20px;
     font-weight: bold;
 }
+
 .input-field-sku {
-    width: 55%;
+    width: 30%;
     padding: 10px;
     font-size: 20px;
     border: 2px solid #000000;
 }
 
-/* Pris */
 .form-group-pris {
     margin-bottom: 20px;
 }
+
 .form-group-pris label {
     display: block;
     margin-bottom: 5px;
     font-size: 20px;
     font-weight: bold;
 }
+
 .input-field-pris {
-    width: 55%;
+    width: 30%;
     padding: 10px;
     font-size: 20px;
     border: 2px solid #000000;
 }
 
-/* Datum */
 .form-group-datum {
     margin-bottom: 20px;
 }
+
 .form-group-datum label {
     display: block;
     margin-bottom: 5px;
     font-size: 20px;
     font-weight: bold;
 }
+
 .input-field-datum {
-    width: 50%;
+    width: 25%;
     padding: 10px;
     font-size: 20px;
     border: 2px solid #000000;
@@ -219,13 +260,15 @@ td a.delete:hover i {
 .custom-file-upload {
     position: relative;
     display: inline-block;
+    cursor: pointer;
 }
 
-.file-input-hidden {
+.custom-file-upload input[type="file"] {
     display: none;
 }
 
-.custom-file-button {
+.custom-file-upload::before {
+    content: 'Välj fil';
     display: inline-block;
     padding: 10px 30px;
     background-color: #000000;
@@ -235,47 +278,6 @@ td a.delete:hover i {
     font-size: 20px;
 }
 
-.custom-file-button:hover {
+.custom-file-upload:hover::before {
     background-color: #555;
-}
-
-.checkbox-group {
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-}
-
-.checkbox-group label {
-    margin-bottom: 10px;
-    font-size: 20px;
-    font-weight: lighter;
-}
-
-.checkbox-group input[type="checkbox"] {
-    width: 15px;
-    height: 15px;
-    transform: scale(1.5); 
-    margin-right: 10px;
-}
-
-.submit-btn {
-    padding: 10px 20px;
-    background-color: #000000;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 20px;
-    cursor: pointer;
-    width: 150px;
-}
-
-.submit-btn:hover {
-    background-color: #555;
-}
-
-small {
-    display: block;
-    margin-top: 5px;
-    color: #666;
-    font-size: 55px;
 }

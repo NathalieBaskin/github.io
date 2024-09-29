@@ -173,7 +173,6 @@
   .hero-text {
     margin-bottom: 2em;
   }
- 
 }
 
 @media (min-width: 1024px) {
@@ -196,7 +195,7 @@
   }
 
   .hero-rubrik {
-    font-size: 5rem;
+    font-size: 4.5rem;
   }
 }
 
@@ -224,8 +223,6 @@
     font-size: 7rem;
     margin-bottom: 0.8em;
   }
-
-  
 }
 
 /*----------------------------------------------SPOTBILDER-------------------------------------------*/
@@ -389,7 +386,6 @@
     flex: 1 1 calc(25% - 20px);
     max-width: calc(25% - 20px);
   }
-
 }
 /*----------------------------------------------PRODUKTSIDA-------------------------------------------*/
 .productsida-grid {
@@ -657,7 +653,6 @@ input[type="radio"] {
   display: none;
   width: 100%;
   border-collapse: collapse;
-
 }
 
 .product-table th,
@@ -665,7 +660,6 @@ input[type="radio"] {
   border: 1px solid #000;
   padding: 0.8em;
   text-align: left;
-  
 }
 .product-table th {
   background-color: grey;
@@ -675,7 +669,6 @@ input[type="radio"] {
 }
 .kunduppgifter {
   font-size: 1rem;
-
 }
 
 .form-group {
@@ -683,7 +676,6 @@ input[type="radio"] {
   flex-direction: column;
   margin-bottom: 1.5em;
   text-align: left;
- 
 }
 
 .adress {
@@ -918,11 +910,11 @@ footer {
 }
 @media (min-width: 2000px) {
   .footerinfo a {
-   font-size: 1.3rem;
+    font-size: 1.3rem;
   }
   .footerinfo p {
     font-size: 1.3rem;
-   }
+  }
   .copyright {
     font-size: 1.2rem;
   }

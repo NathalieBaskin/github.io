@@ -26,9 +26,6 @@
     display: flex;
     justify-content: left;
   }
-  .logo {
-    width: 50%;
-  }
 }
 
 /*----------------------------------------------SÖKFUNKTION-----------------------------------------------*/
@@ -81,7 +78,7 @@
 .icons-container a:hover,
 .headerlink a:hover,
 .hero a:hover {
-  color: #5e0707;
+  color: #8a0505;
 }
 .headerlink {
   display: flex;

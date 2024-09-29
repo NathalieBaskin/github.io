@@ -39,22 +39,22 @@
   display: flex;
   align-items: center;
   padding-left: 0;
-  margin-bottom: 15px;
-  margin-left: 5px;
-  margin-top: 10px;
+  margin-bottom: 1em;
+  margin-left: 0.5em;
+  margin-top: 0.7em;
 }
 
 .search {
   width: 100%;
-  padding: 8px 30px 8px 30px;
+  padding: 0.5em 2em 0.5em 2em;
   font-size: 1em;
   border: 2px solid #000000;
-  border-radius: 20px;
+  border-radius: 2em;
 }
 
 .fa-solid.fa-magnifying-glass {
   position: absolute;
-  left: 10px;
+  left: 0.8em;
   color: #000000;
   font-size: 1em;
 }
@@ -66,16 +66,15 @@
   }
 }
 @media (min-width: 2000px) {
- .search {
-  padding: 16px 60px 16px 40px;
-  font-size: 1.5em;
-  border: 3px solid black;
-  border-radius: 30px;
-
- }
- .fa-solid.fa-magnifying-glass {
-  font-size: 1.5em;
- }
+  .search {
+    padding: 1em 4em 1em 2.5em;
+    font-size: 1.5em;
+    border: 3px solid black;
+    border-radius: 2em;
+  }
+  .fa-solid.fa-magnifying-glass {
+    font-size: 1.5em;
+  }
 }
 
 /*------------------------------------HEADERIKONER/LÄNKAR-----------------------------------------*/
@@ -87,18 +86,18 @@
 .headerlink {
   display: flex;
   justify-content: flex-start;
-  gap: 15px;
-  margin-top: 10px;
-  margin-left: 20px;
-  margin-bottom: 15px;
-  font-size: 1.1em;
+  gap: 1em;
+  margin-top: 0.2em;
+  margin-left: 1em;
+  margin-bottom: 0.9em;
+  font-size: 1rem;
 }
 
 .icons-container {
   display: flex;
-  gap: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
+  gap: 0.6em;
+  margin-left: 0.6em;
+  margin-right: 0.6em;
 }
 .icons-container i {
   font-size: 1.2em;
@@ -138,45 +137,44 @@
   justify-content: center;
   width: 100%;
   margin: 0 auto;
-  text-align: center; 
+  text-align: center;
 }
 
 .hero-rubrik {
-  font-size: 4em;
+  font-size: 4rem;
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 0.5em;
   font-weight: bold;
   text-decoration: underline;
 }
 
 .hero a {
-  font-size: 3em;
+  font-size: 3rem;
   text-decoration: none;
-  margin-bottom: 20px;
   text-align: center;
 }
 
 .hero img {
   height: auto;
   width: 95%;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 3em;
+  margin-bottom: 3em;
 }
 
 @media (max-width: 640px) {
   .hero-text {
-    margin-bottom: 20px;
+    margin-bottom: 2em;
   }
 }
 @media (min-width: 641px) {
   .hero a {
-    font-size: 4em;
+    font-size: 4rem;
   }
   .hero-text {
-    margin-bottom: 20px;
+    margin-bottom: 2em;
   }
+ 
 }
-
 
 @media (min-width: 1024px) {
   .hero {
@@ -184,30 +182,21 @@
     justify-content: space-between;
   }
 
-
   .hero img {
     width: 60%;
-    padding: 20px;
+    padding: 1.1em;
   }
 
- 
   .hero-text {
     display: flex;
     flex-direction: column;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
-  
     text-align: center;
   }
 
   .hero-rubrik {
-    font-size: 4em;
-    margin-bottom: 10px;
-  }
-
-  .hero a {
-    font-size: 3em;
-    margin-bottom: 0;
+    font-size: 5rem;
   }
 }
 
@@ -217,32 +206,26 @@
     justify-content: space-between;
   }
 
-
   .hero img {
     width: 60%;
-    padding: 20px;
   }
 
- 
   .hero-text {
-    font-size: 2em;
+    font-size: 1.5rem;
     display: flex;
     flex-direction: column;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
-  
+
     text-align: center;
   }
 
   .hero-rubrik {
-    font-size: 4em;
-    margin-bottom: 10px;
+    font-size: 7rem;
+    margin-bottom: 0.8em;
   }
 
-  .hero a {
-    font-size: 3em;
-    margin-bottom: 0;
-  }
+  
 }
 
 /*----------------------------------------------SPOTBILDER-------------------------------------------*/
@@ -250,8 +233,8 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-content: center;
-  gap: 10px;
-  margin-top: 50px;
+  gap: 0.8em;
+  margin-top: 3em;
 }
 .spotbilder img {
   width: 100%;
@@ -260,7 +243,7 @@
 .bild-container {
   position: relative;
   display: grid;
-  gap: 15px;
+  gap: 1em;
 }
 .text-ett,
 .text-två,
@@ -270,8 +253,8 @@
   left: 50%;
   transform: translate(-50%, 50%);
   color: rgb(0, 0, 0);
-  padding: 5px;
-  font-size: 4em;
+  padding: 0.2em;
+  font-size: 4rem;
   text-transform: uppercase;
   font-weight: bold;
   text-align: center;
@@ -304,22 +287,15 @@
     display: grid;
   }
 }
-@media (min-width: 1200px) {
-  .text-ett,
-  .text-två,
-  .text-tre {
-    font-size: 4em;
-  }
-}
 /*----------------------------------------------PRODUKTBILDER-------------------------------------------*/
 
 .product-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
-  padding: 10px;
-  margin-bottom: 50px;
+  gap: 1em;
+  padding: 0.5em;
+  margin-bottom: 5em;
 }
 
 .product {
@@ -335,8 +311,8 @@
 }
 .product-grid i {
   position: absolute;
-  bottom: 65px;
-  right: 15px;
+  bottom: 3.4em;
+  right: 0.6em;
   color: rgb(255, 255, 255);
   font-size: 2em;
   z-index: 1;
@@ -356,10 +332,10 @@
 .product-info {
   display: grid;
   grid-template-rows: auto auto;
-  grid-row-gap: 5px;
+  grid-row-gap: 0.3em;
   text-align: left;
-  margin-top: 10px;
-  font-size: 1.5em;
+  margin-top: 1em;
+  font-size: 2rem;
 }
 
 .product-name-price {
@@ -383,13 +359,13 @@
 
 .badge {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 0.5em;
+  left: 0.3em;
   background-color: black;
   color: white;
-  padding: 5px 10px;
+  padding: 0.2em 0.5em;
   border-radius: 5px;
-  font-size: 2em;
+  font-size: 2rem;
 }
 /*-----MOBIL----*/
 @media (max-width: 640px) {
@@ -413,15 +389,7 @@
     flex: 1 1 calc(25% - 20px);
     max-width: calc(25% - 20px);
   }
-  .product-name-price {
-    font-size: 1.1em;
-  }
-  .product-brand {
-    font-size: 1em;
-  }
-  .product-grid i {
-    bottom: 85px;
-  }
+
 }
 /*----------------------------------------------PRODUKTSIDA-------------------------------------------*/
 .productsida-grid {
@@ -429,15 +397,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 40px;
-}
-.productsida-grid i {
-  position: absolute;
-  bottom: 40px;
-  right: 10px;
-  color: rgb(255, 255, 255);
-  font-size: 2em;
-  z-index: 1;
+  gap: 1.5em;
 }
 
 .productsida-grid a i.fa-heart,
@@ -456,16 +416,16 @@
 .product-sida img {
   width: 100%;
   height: auto;
-  margin-top: 20px;
+  margin-top: 1.5em;
 }
 
 .product-sida .fa-heart {
   position: absolute;
-  bottom: 40px;
-  right: 25px;
+  bottom: 1em;
+  right: 1em;
   font-size: 2em;
   color: rgb(255, 255, 255);
-  z-index: 10;
+  z-index: 1;
   transition: transform 0.3s ease;
 }
 
@@ -476,35 +436,36 @@
 
 .product-sida-name {
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 .product-sida-brand {
   color: #000000;
-  font-size: 1.2em;
+  font-size: 1.2rem;
 }
 
 .pris {
   text-align: left;
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 .lorem {
-  font-size: 1em;
+  font-size: 1rem;
   text-align: left;
 }
 .button {
   display: inline-block;
-  padding: 10px 15px;
+  padding: 0.8em 1em;
   background-color: #ffffff;
   color: rgb(0, 0, 0);
   text-align: center;
   text-decoration: none;
-  font-size: 1.2em;
+  font-size: 1.2rem;
   border-radius: 5px;
   border: 2px solid black;
   cursor: pointer;
   transition-duration: 0.3s;
+  margin-bottom: 2em;
 }
 
 .button:hover {
@@ -560,16 +521,16 @@
 }
 
 @media (min-width: 2000px) {
- .productsida-grid {
-  font-size: 2em;
- }
+  .productsida-grid {
+    font-size: 2rem;
+  }
 }
 /*---------------------------------PRODUKTSIDA - SLIDEDHOW-------------------------------------------*/
 
 .slider h2 {
   text-align: center;
   text-transform: capitalize;
-  font-size: 1.8em;
+  font-size: 1.8rem;
   font-weight: bold;
 }
 
@@ -578,7 +539,7 @@
   width: 100%;
   overflow: hidden;
   margin: 0 auto;
-  margin-top: 15px;
+  margin-top: 1em;
 }
 
 .slides {
@@ -591,7 +552,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 1.5em;
 }
 
 .slide a {
@@ -623,16 +584,16 @@ input[type="radio"] {
 .nav-container {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 1.5em;
 }
 
 .nav {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
+  width: 0.8em;
+  height: 0.8em;
+  border-radius: 20px;
   background-color: #ddd;
-  margin: 5px;
-  margin-bottom: 20px;
+  margin: 0.2em;
+  margin-bottom: 1.5em;
   cursor: pointer;
 }
 
@@ -650,9 +611,9 @@ input[type="radio"] {
 }
 /*-----DATOR----*/
 @media (min-width: 2000px) {
-.slider h2 {
-  font-size: 3em;
-}
+  .slider h2 {
+    font-size: 3rem;
+  }
 }
 
 /*------------------------------------------------KASSAN-------------------------------------------------*/
@@ -670,9 +631,9 @@ input[type="radio"] {
   justify-content: space-between;
   align-items: center;
   border: 1px solid #000;
-  padding: 10px;
-  margin-bottom: 10px;
-  font-size: 0.7em;
+  padding: 0.8em;
+  margin-bottom: 0.8em;
+  font-size: 1rem;
 }
 
 .product-info-kassa {
@@ -681,27 +642,30 @@ input[type="radio"] {
 }
 
 .unit-price {
-  font-size: 0.8em;
+  font-size: 0.9rem;
   color: gray;
-  margin-top: 5px;
+  margin-top: 0.3em;
+  text-align: left;
 }
 
 .total-price {
   font-weight: bold;
-  font-size: 1.2em;
+  font-size: 1.2rem;
 }
 
 .product-table {
   display: none;
   width: 100%;
   border-collapse: collapse;
+
 }
 
 .product-table th,
 .product-table td {
   border: 1px solid #000;
-  padding: 10px;
+  padding: 0.8em;
   text-align: left;
+  
 }
 .product-table th {
   background-color: grey;
@@ -710,15 +674,16 @@ input[type="radio"] {
   font-weight: bold;
 }
 .kunduppgifter {
-  margin-top: 30px;
-  font-size: 1em;
+  font-size: 1rem;
+
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 1.5em;
   text-align: left;
+ 
 }
 
 .adress {
@@ -727,12 +692,12 @@ input[type="radio"] {
 
 .form-group label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 0.2em;
 }
 
 .form-group input {
   width: 100%;
-  padding: 10px;
+  padding: 0.8em;
   border: 1px solid #000;
 }
 #email {
@@ -745,11 +710,11 @@ input[type="radio"] {
 .button-kassa {
   background-color: #fff;
   color: #000;
-  padding: 10px 20px;
+  padding: 0.8em 1.6em;
   border: 1px solid #000;
   cursor: pointer;
-  margin-top: 20px;
-  margin-bottom: 30px;
+  margin-top: 1.2em;
+  margin-bottom: 2em;
 }
 
 .checkbox-group {
@@ -757,15 +722,21 @@ input[type="radio"] {
 }
 
 @media (max-width: 640px) {
-  #fornamn, #efternamn, #email {
+  #fornamn,
+  #efternamn,
+  #email {
     width: 90%;
   }
- #gata, #stad {
-  width: 90%;
- }
- #postnummer {
-  width: 50%;
- }
+  #gata,
+  #stad {
+    width: 90%;
+  }
+  #postnummer {
+    width: 50%;
+  }
+  .kunduppgifter {
+    margin-left: 4%;
+  }
 }
 @media (min-width: 641px) {
   .kassa {
@@ -776,29 +747,24 @@ input[type="radio"] {
     text-align: left;
     font-size: 1.1em;
   }
-  .kunduppgifter {
-    display: grid;
-
-    gap: 30px;
-    text-align: left;
-  }
 
   .name-group {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
-    gap: 30px;
+    gap: 2em;
   }
 
   .product-table {
     display: table;
-    margin: 20px auto;
+    margin: 2em auto;
   }
 
   .product-list {
     display: none;
   }
-  #fornamn, #efternamn  {
+  #fornamn,
+  #efternamn {
     width: 93%;
   }
   #email {
@@ -806,7 +772,6 @@ input[type="radio"] {
   }
   #gata {
     width: 90%;
-  
   }
   #postnummer {
     width: 50%;
@@ -814,24 +779,23 @@ input[type="radio"] {
   #stad {
     width: 70%;
   }
-
 }
 
 @media (min-width: 1024px) {
   .kassa {
-    width: 80%;
-    font-size: 2em;
+    width: 90%;
+    font-size: 1.2rem;
   }
   .kunduppgifter {
-    gap: 30px;
+    gap: 2em;
   }
 
   .button-kassa {
-    font-size: 1.2em;
+    font-size: 1.2rem;
     width: 300px;
   }
   .form-group input {
-    padding: 30px;
+    padding: 1.3em;
   }
 }
 
@@ -840,18 +804,18 @@ input[type="radio"] {
 footer {
   width: 100%;
   margin: 0;
-  background-color: rgb(156, 147, 147); 
+  background-color: rgb(156, 147, 147);
   position: relative;
   z-index: 1;
-  margin-top: 30px;
+  margin-top: 2em;
   box-sizing: border-box;
 }
 
 .footericon-container {
   display: grid;
-  gap: 20px;
+  gap: 1.5em;
   align-items: center;
-  font-size: 1em;
+  font-size: 1rem;
   color: rgb(0, 0, 0);
 }
 
@@ -870,25 +834,25 @@ footer {
 
 .footerinfo {
   display: flex;
-  gap: 35px;
+  gap: 2.1em;
   margin: 0;
 }
 
 .footerinfo div {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0.8em;
 }
 
 .footerinfo p {
   font-weight: bold;
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 .footerinfo a {
   text-decoration: none;
   color: black;
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 .footerinfo a:hover {
@@ -897,20 +861,19 @@ footer {
 
 .copyright {
   color: #000000;
-  font-size: 0.8em;
+  font-size: 1rem;
   text-align: center;
-  padding: 10px 0; 
+  padding: 0.8em 0;
   background-color: rgb(156, 147, 147);
 }
 
 /*-----MOBIL----*/
 @media (max-width: 640px) {
   footer {
-    background-color: white; 
+    background-color: white;
   }
 
   .footericon-container {
-    margin-top: 65px;
     grid-template-columns: repeat(1, 1fr);
   }
 
@@ -919,7 +882,7 @@ footer {
   }
 
   .copyright {
-    background-color: white; 
+    background-color: white;
   }
 }
 
@@ -942,37 +905,42 @@ footer {
 
 @media (min-width: 1200px) {
   .footerinfo {
-    font-size: 2em;
+    font-size: 1.5rem;
   }
 
   .footericon-info {
-    font-size: 2em;
+    font-size: 1.5em;
   }
 
   .copyright {
-    font-size: 1.1em;
+    font-size: 1.2rem;
   }
 }
 @media (min-width: 2000px) {
-  
+  .footerinfo a {
+   font-size: 1.3rem;
+  }
+  .footerinfo p {
+    font-size: 1.3rem;
+   }
   .copyright {
-    font-size: 1.8em;
+    font-size: 1.2rem;
   }
 }
 
 /*------------------------------------------------ACCORDION-----------------------------------------------*/
 
 .accordion {
-  padding-top: 10px;
+  padding-top: 0.5em;
   padding-bottom: 10px;
   width: 100%;
 }
 
 .accordion-item {
   border-bottom: 1px solid rgb(119, 117, 117);
-  border-top:1px solid rgb(119, 117, 117);
-  padding-bottom: 2px;
-  padding-top: 2px;
+  border-top: 1px solid rgb(119, 117, 117);
+  padding-bottom: 0.1em;
+  padding-top: 0.1em;
 }
 .accordion-checkbox {
   display: none;
@@ -990,8 +958,8 @@ footer {
   cursor: pointer;
   outline: none;
   display: grid;
-  padding-bottom: 10px;
-  padding-top: 5px;
+  padding-bottom: 0.5em;
+  padding-top: 0.3em;
 }
 
 .accordion-button:hover {
@@ -1011,7 +979,7 @@ footer {
 
 .accordion-body a {
   display: block;
-  margin-top: 10px;
+  margin-top: 0.8em;
   color: #000000;
   text-decoration: none;
 }

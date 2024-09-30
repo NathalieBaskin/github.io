@@ -76,8 +76,7 @@
 
 /*------------------------------------HEADERIKONER/LÄNKAR-----------------------------------------*/
 .icons-container a:hover,
-.headerlink a:hover,
-.hero a:hover {
+.headerlink a:hover, .hero a:hover {
   color: #8a0505;
 }
 .headerlink {
@@ -313,12 +312,12 @@
 }
 
 .product-grid a i.fa-heart, .productsida-grid a i.fa-heart,
-.icons-container a{
+.icons-container a {
   transition: transform 0.3s ease;
 }
 
 .product-grid a:hover i.fa-heart, .productsida-grid a:hover i.fa-heart,
-.icons-container a:hover, .hero a:hover {
+.icons-container a:hover {
   transform: scale(1.5);
   color: rgb(120, 42, 42);
 }
@@ -581,7 +580,7 @@ input[type="radio"] {
 .nav {
   width: 1em;
   height: 1em;
-  background-color: #ffffff00;
+  background-color: #ffffff;
   border-radius: 50%;
   cursor: pointer;
   display: flex;

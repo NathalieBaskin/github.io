@@ -3,12 +3,21 @@
     font-family: Arial, Helvetica, sans-serif;
   }
   .icons-container a,
-  .headerlink a,
-  .hero a {
+  .headerlink a {
     color: black;
     text-decoration: none;
     font-weight: bold;
     cursor: pointer;
+  }
+  .product i.fa-shopping-cart, .icons-container a, .headerlink a{
+    transition: transform 0.3s ease;
+  }
+  
+  .product .fa-shopping-cart:hover, .icons-container a:hover,
+  .headerlink a:hover {
+    transform: scale(1.2);
+    color: rgb(155, 44, 44);
+  
   }
   
   /*----------------------------------------------HEADERLOGGA----------------------------------------------*/
@@ -211,6 +220,9 @@
       flex: 1 1 100%;
       max-width: 100%;
     }
+    .badge {
+      font-size: 1.5rem;
+    }
   }
   
   /*-----IPAD----*/
@@ -219,6 +231,9 @@
       flex: 1 1 calc(50% - 20px);
       max-width: calc(50% - 20px);
     }
+    .badge {
+      font-size: 1.2rem;
+    }
   }
   
   /*-----DATOR----*/
@@ -226,6 +241,14 @@
     .product {
       flex: 1 1 calc(25% - 20px);
       max-width: calc(25% - 20px);
+    }
+    .badge {
+      font-size: 1.3rem;
+    }
+  }
+  @media (min-width: 2000px) {
+    .badge {
+      font-size: 2rem;
     }
   }
   /*-------------------------------------------------FOOTER-------------------------------------------------*/

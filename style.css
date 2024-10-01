@@ -9,8 +9,44 @@
   color: black;
   text-decoration: none;
   font-weight: bold;
+}
+.icons-container a,
+.headerlink a,
+.hero a,
+.product-sida .fa-heart,
+.button,
+.button-kassa,
+.nav,
+.text-ett,
+.text-två,
+.text-tre {
   cursor: pointer;
 }
+
+.icons-container a:hover,
+.headerlink a:hover,
+.hero a:hover,
+.text-ett:hover,
+.text-ett:hover,
+.text-två:hover,
+.text-tre:hover {
+  color: rgb(155, 44, 44);
+
+}
+.product-grid a i.fa-heart,
+.productsida-grid a i.fa-heart,
+.icons-container a, .headerlink a{
+  transition: transform 0.3s ease;
+}
+
+.product-grid a:hover i.fa-heart,
+.productsida-grid a:hover i.fa-heart,
+.icons-container a:hover,.headerlink a:hover {
+  transform: scale(1.2);
+  color: rgb(155, 44, 44);
+
+}
+
 
 /*----------------------------------------------HEADERLOGGA----------------------------------------------*/
 .logo-container {
@@ -76,10 +112,7 @@
 }
 
 /*------------------------------------HEADERIKONER/LÄNKAR-----------------------------------------*/
-.icons-container a:hover,
-.headerlink a:hover, .hero a:hover {
-  color: #8a0505;
-}
+
 .headerlink {
   display: flex;
   justify-content: flex-start;
@@ -121,7 +154,7 @@
     font-size: 1.5rem;
   }
   .icons-container {
-    font-size: 2em;
+    font-size: 1.7em;
   }
 }
 /*------------------------------------------------HERO---------------------------------------------------*/
@@ -196,11 +229,8 @@
 }
 
 @media (min-width: 1900px) {
-  
-
   .hero-text {
     font-size: 1.5rem;
-
   }
 
   .hero-rubrik {
@@ -240,14 +270,8 @@
   font-weight: bold;
   text-align: center;
   transition: color 0.3s ease;
-  cursor: pointer;
 }
 
-.text-ett:hover,
-.text-två:hover,
-.text-tre:hover {
-  color: rgb(112, 5, 5);
-}
 /*-----MOBIL----*/
 @media (max-width: 640px) {
   .spotbilder {
@@ -269,7 +293,11 @@
   }
 }
 /*----------------------------------------------PRODUKTBILDER-------------------------------------------*/
-
+.product {
+  flex: 1 1 calc(25% - 20px);
+  max-width: calc(25% - 20px);
+  position: relative;
+}
 .product-grid {
   display: flex;
   flex-wrap: wrap;
@@ -278,36 +306,19 @@
   padding: 0.5em;
   margin-bottom: 5em;
 }
-
-.product {
-  flex: 1 1 calc(25% - 20px);
-  max-width: calc(25% - 20px);
-  position: relative;
+.product-grid i {
+  position: absolute;
+  bottom: 2.5em;
+  right: 0.6em;
+  color: rgb(255, 255, 255);
+  font-size: 1.7em;
+  z-index: 1;
 }
 
 .product img {
   width: 100%;
   height: auto;
   display: block;
-}
-.product-grid i {
-  position: absolute;
-  bottom: 3.4em;
-  right: 0.6em;
-  color: rgb(255, 255, 255);
-  font-size: 2em;
-  z-index: 1;
-}
-
-.product-grid a i.fa-heart, .productsida-grid a i.fa-heart,
-.icons-container a {
-  transition: transform 0.3s ease;
-}
-
-.product-grid a:hover i.fa-heart, .productsida-grid a:hover i.fa-heart,
-.icons-container a:hover {
-  transform: scale(1.5);
-  color: rgb(120, 42, 42);
 }
 
 
@@ -316,7 +327,7 @@
   grid-template-rows: auto auto;
   grid-row-gap: 0.3em;
   text-align: left;
-  margin-top: 1em;
+  margin-top: 0.6em;
   font-size: 2rem;
 }
 
@@ -372,6 +383,17 @@
     max-width: calc(25% - 20px);
   }
 }
+@media (min-width: 2000px) {
+  .product-name-price {
+    font-size: 1.5rem;
+  }
+  .product-brand {
+    font-size: 1.2rem;
+  }
+  .product-grid i {
+    bottom: 3em;
+  }
+}
 /*----------------------------------------------PRODUKTSIDA-------------------------------------------*/
 .productsida-grid {
   display: flex;
@@ -381,16 +403,6 @@
   gap: 1.5em;
 }
 
-.productsida-grid a i.fa-heart,
-.icons-container a i.fa-heart {
-  transition: transform 0.3s ease;
-}
-
-.productsida-grid a:hover i.fa-heart,
-.icons-container a:hover i.fa-heart {
-  transform: scale(1.5);
-  color: rgb(120, 42, 42);
-}
 .product-sida {
   position: relative;
 }
@@ -444,7 +456,6 @@
   font-size: 1.2rem;
   border-radius: 5px;
   border: 2px solid black;
-  cursor: pointer;
   transition-duration: 0.3s;
   margin-bottom: 2em;
 }
@@ -462,12 +473,10 @@
 }
 /*-----IPAD----*/
 @media (min-width: 641px) {
-
   .productsida-grid {
     justify-content: space-between;
     align-items: flex-start;
     flex-direction: row;
-    cursor: pointer;
   }
 
   .product-sida {
@@ -500,7 +509,22 @@
 }
 
 @media (min-width: 2000px) {
-  .productsida-grid {
+  .productsida-grid  {
+    font-size: 1.5rem;
+  }
+  .lorem {
+    font-size: 2rem;
+  }
+  .product-sida-name {
+    font-size: 2rem;
+  }
+  .product-sida-brand {
+    font-size: 1.8rem;
+  }
+  .pris {
+    font-size: 1.6rem;
+  }
+  .button {
     font-size: 2rem;
   }
 }
@@ -523,7 +547,7 @@
 
 .slides {
   display: flex;
-  width: 200%; 
+  width: 200%;
   transition: transform 0.5s ease-in-out;
 }
 
@@ -552,8 +576,17 @@ input[type="radio"] {
   transform: translateX(0);
 }
 
+
 #slide2:checked ~ .slides {
-  transform: translateX(-50%); 
+  transform: translateX(-50%);
+}
+#slide1:checked ~ .nav-container .left {
+  cursor: not-allowed;
+  opacity: 0.2;
+}
+#slide2:checked ~ .nav-container .right {
+  cursor: not-allowed;
+  opacity: 0.2; 
 }
 
 .nav-container {
@@ -570,26 +603,23 @@ input[type="radio"] {
   height: 1em;
   background-color: #ffffff;
   border-radius: 50%;
-  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 3em;
-
 }
 
 .left::before {
-  content: '<'; 
+  content: "<";
 }
 
 .right::after {
-  content: '>'; 
+  content: ">";
 }
 
 .nav:hover {
   background-color: rgba(255, 255, 255, 1);
 }
-
 
 #slide1:checked ~ .nav-container .right {
   content: ">";
@@ -603,6 +633,14 @@ input[type="radio"] {
   .slider {
     display: none;
   }
+}
+@media (min-width: 2000px) {
+  .slider h2 {
+    font-size: 3rem;
+  }
+}
+.slider {
+  margin-bottom: 4em;
 }
 
 /*------------------------------------------------KASSAN-------------------------------------------------*/
@@ -697,7 +735,6 @@ input[type="radio"] {
   color: #000;
   padding: 0.8em 1.6em;
   border: 1px solid #000;
-  cursor: pointer;
   margin-top: 1.2em;
   margin-bottom: 2em;
 }
@@ -940,7 +977,6 @@ footer {
   width: 100%;
   text-align: center;
   border: none;
-  cursor: pointer;
   outline: none;
   display: grid;
   padding-bottom: 0.5em;

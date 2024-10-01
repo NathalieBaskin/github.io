@@ -1,4 +1,5 @@
 /*----------------------------------------------GENERELLA STILAR--------------------------------------*/
+
 * {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -44,7 +45,7 @@
 .search {
   width: 100%;
   padding: 0.5em 2em 0.5em 2em;
-  font-size: 1em;
+  font-size: 1rem;
   border: 2px solid #000000;
   border-radius: 2em;
 }
@@ -117,7 +118,7 @@
 }
 @media (min-width: 1024px) {
   .headerlink a {
-    font-size: 1.5em;
+    font-size: 1.5rem;
   }
   .icons-container {
     font-size: 2em;
@@ -146,7 +147,6 @@
 
 .hero a {
   font-size: 3rem;
-  text-decoration: none;
   text-align: center;
 }
 
@@ -196,23 +196,11 @@
 }
 
 @media (min-width: 1900px) {
-  .hero {
-    flex-direction: row-reverse;
-    justify-content: space-between;
-  }
-
-  .hero img {
-    width: 60%;
-  }
+  
 
   .hero-text {
     font-size: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 
-    text-align: center;
   }
 
   .hero-rubrik {
@@ -336,7 +324,7 @@
   display: grid;
   grid-template-columns: 1fr auto;
   font-weight: bold;
-  font-size: 0.8em;
+  font-size: 0.8rem;
 }
 
 .product-price {
@@ -344,7 +332,7 @@
 }
 
 .product-brand {
-  font-size: 0.7em;
+  font-size: 0.7rem;
 }
 .badge-container {
   position: relative;
